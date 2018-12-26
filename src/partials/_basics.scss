@@ -1,0 +1,58 @@
+@import './partials/typography';
+@import './partials/colors';
+
+.text-primary {
+    color: $primary-color !important;
+  }
+  
+  .bg-primary {
+    background-color: $primary-color !important;
+  }
+  
+  .text-secondary {
+    color: $secondary-color !important;
+  }
+  
+  .bg-secondary {
+    background-color: $secondary-color !important;
+  }
+  
+  .text-accent {
+    color: $accent-color !important;
+  }
+  
+  .bg-accent {
+    background-color: $accent-color !important;
+  }
+  
+  .text-accent-dark {
+    color: $accent-dark-color !important;
+  }
+  
+  .bg-accent-dark {
+    background-color: $accent-dark-color !important;
+  }
+  
+  .text-accent-light {
+    color: $accent-light-color !important;
+  }
+  
+  .bg-accent-light {
+    background-color: $accent-light-color !important;
+  }
+  
+  .text-white {
+    color: $white-color !important;
+  }
+  
+  .bg-white {
+    background-color: $white-color !important;
+  }
+  
+  .text-black {
+    color: $black-color !important;
+  }
+  
+  .bg-black {
+    background-color: $black-color !important;
+  }
