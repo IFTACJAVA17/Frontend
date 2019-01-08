@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './games-container.scss';
+import './gamesContainer.scss';
 
 const GamesContainerComponent = (props) => {
     return (

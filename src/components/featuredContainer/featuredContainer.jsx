@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './featured-container.scss';
+import './featuredContainer.scss';
 
 class FeaturedContainerComponent extends Component {
     
