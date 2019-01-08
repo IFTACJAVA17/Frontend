@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
 import FeaturedContainerComponent from './components/featured-container/featured-container';
+import GamesContainerComponent from './components/games-container/games-container';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             </div>
             <div className="col">
               <FeaturedContainerComponent />
+              <GamesContainerComponent />
             </div>
             <div className="col-2">
               <SidebarComponent />

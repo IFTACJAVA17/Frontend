@@ -1,10 +1,15 @@
 @import '../../partials/basics';
 
-.featured-container {
+.games-container {
     background-color: $secondary-color;
     width: 100%;
     margin: auto;
-    margin-top: $bl * 2;
-    min-height: 20vh;
+    margin-top: $bl;
+    padding: $bl/2;
+    min-height: 57vh;
     border-radius: $bl/2;
+
+    & h4 {
+        margin-top: 0;
+    }
 }
