@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import FriendList from './components/friendlist-component/friendlist';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FriendList from './components/friendlist-component/FriendList';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">

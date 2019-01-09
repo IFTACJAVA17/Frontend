@@ -22,11 +22,33 @@
 .friendlist-offline {
     color: $white-color;
     float:left;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 .friendlist-online {
     color: $primary-color;
     float:left;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.friendlist-user:hover {
+    background-color: lighten($secondary-color, 10%);
+    cursor: pointer;
+}
+
+.add-friend-button {
+    background-color: $primary-color;
+    color: $secondary-color;
+    float:right;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "Sintony";
+    font-weight: bold;
 }
 
 h3 {
@@ -34,4 +56,27 @@ h3 {
     padding-bottom: 0;
     line-height: 0;
     margin-top: 1em;
+    margin-left: 0.5em;
+}
+
+.popup-style {
+    background-color: lighten($secondary-color, 10%) !important;
+    border-radius: 15px;
+    border-color: black !important;
+    
+}
+
+.friend-list-text {
+    color: $primary-color !important;
+    font-size: 16px;
+    font-family: "Sintony";
+    font-weight: bold;
+}
+
+.friend-table {
+    width: 100%;
+}
+
+.friend-card {
+    background-color: $accent-light-color;
 }
