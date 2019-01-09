@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import './featuredContainer.scss';
 
-class FeaturedContainerComponent extends Component {
-    
-    render() {
-        return (
-            <div className="featured-container">
-                ...
-            </div>
-        );
-    }
+const center = {
+    textAlign: 'center',
+    lineHeight: '12rem'
+}
+
+const FeaturedContainerComponent = (props) => {
+    return (
+        <div className="featured-container">
+            <h4 style={center}>{props.text}</h4>
+        </div>
+    );
 }
 
 export default FeaturedContainerComponent;
