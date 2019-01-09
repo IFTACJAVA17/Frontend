@@ -1,4 +1,27 @@
-.tournament-component {
-    max-height: 300px;
+@import '../../partials/basics';
+
+.tournament-container {
+    height: 24em;
+    width: 24em;
     overflow: scroll;
+    overflow-x: hidden;
+    background-color: $secondary-color;
+
+
+    & .header {
+        background-color: lighten($secondary-color, 13%);
+        border-radius: $bl/2 $bl/2 0 0;
+        padding: 10px;
+
+        & h5 {
+            margin-top: .25em;
+            margin-bottom: 0;
+            color: $primary-color;
+            line-height: 1.5em;
+        }
+    }
+
+    & span {
+        margin-left: 10px;
+    }
 }

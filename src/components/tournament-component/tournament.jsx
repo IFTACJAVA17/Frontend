@@ -4,7 +4,6 @@ import { Collapse, Table, Button } from 'reactstrap';
 
 class Tournament extends React.Component {
   constructor(props) {
-    console.log(props);
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = { 
@@ -22,7 +21,7 @@ class Tournament extends React.Component {
     return (
       <div className='tournament-card'>
         <div onClick={this.toggle}>
-          <span className='a'>{this.state.tournament.name}</span><span className='status-yellow b'>{this.state.tournament.status}</span>
+          <span>{this.state.tournament.name}</span><span className='status-green'>{this.state.tournament.status}</span>
         </div>
         <Collapse isOpen={this.state.collapse}>
           <div>
@@ -55,11 +54,5 @@ class Tournament extends React.Component {
     );
   }
 }
-
-let tournament;
-
-const tournament1 = { name: 'Tournament 1', timeLeft: '50 minutes', status: 'Started', players: '6', game: 'Quake 3', type: 'Survival' };
-const tournament2 = { name: 'tournament 2', timeLeft: '1 hour', status: 'About to Start', players: '8' };
-
 
 export default Tournament;

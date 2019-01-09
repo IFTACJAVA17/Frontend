@@ -1,47 +1,27 @@
+@import '../../partials/basics';
 
 .tournament-card {
-  background-color: #61dafb;
+  background-color: lighten($secondary-color, 5%);
   size: 20em;
+  color: $white-color;
+
+   & button {
+     margin-left: 17em;
+     margin-bottom: 1em;
+   }
 }
 
 .tournament-card > div:first-child {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background-color: #1a4a66;
-  color: white;
-}
-
-th {
-  text-align: left;
+  background-color: $secondary-color;
+  color: $white-color;
 }
 
 .status-green {
-  border: 0.2em solid green;
+  border: 0.2em solid $primary-color;
   border-radius: 0.5em;
-  background-color: green;
-  color: white;
-  
-}
-
-.status-yellow {
-  border: 0.2em solid yellow;
-  border-radius: 0.5em;
-  background-color: yellow;
-  color: black;
-}
-
-.status-grey {
-  border: 0.2em solid grey;
-  border-radius: 0.5em;
-  background-color: grey;
-  color: white;
-}
-
-.a {
-  margin-right: 10em;
-}
-
-.b {
-  text-align: right;
-  margin-left: 10em;
+  background-color: $primary-color;
+  color: $black-color;
+  margin-left: 2em;
 }
