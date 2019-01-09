@@ -1,0 +1,62 @@
+@import './colors';
+@import './typography';
+
+
+.btn {
+    font-family: $headingFontStack;
+    margin: 1em;
+    padding: .4em 2em;
+    box-shadow: 2px 1px 1px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: $primary-color;
+    border-color: darken($primary-color, 10%);
+    color: $secondary-color;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 20%);
+        color: $secondary-color;
+    }
+}
+
+.btn-default {
+    background-color: $white-color;
+    border-color: darken($white-color, 10%);
+    color: $secondary-color;
+    margin-left: 0;
+
+    &:hover{
+        background-color: darken($white-color, 10%);
+        border-color: darken($white-color, 20%);
+        color: $secondary-color;
+    }
+}
+
+.btn-info {
+    background-color: $accent-light-color;
+    border-color: darken($accent-light-color, 10%);
+    color: $black-color;
+
+    &:hover{
+        background-color: darken($accent-light-color, 10%);
+        border-color: darken($accent-light-color, 20%);
+        color: $black-color;
+    }
+}
+
+.btn-warning {
+    background-color: $accent-color;
+    border-color: darken($accent-color, 10%);
+    color: $black-color;
+
+    &:hover{
+        background-color: darken($accent-color, 10%);
+        border-color: darken($accent-color, 20%);
+        color: $black-color;
+    }
+}

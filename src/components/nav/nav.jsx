@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavbarBrand, Dropdown, NavItem, NavLink, Collapse, NavbarToggler } from 'reactstrap';
+import {Navbar, Nav, NavbarBrand, Dropdown, NavItem, NavLink, Collapse, FormGroup, Form, Button, Input } from 'reactstrap';
 import './nav.scss';
 
 class NavComponent extends Component {
@@ -23,10 +23,17 @@ class NavComponent extends Component {
         return (
             <div>
                 <Navbar className="bg-secondary">
-                    <span className="navbar-toggler-icon" onClick={this.toggle}>
+                    <span className="navbar-toggler" onClick={this.toggle}>
                         <i className="fas fa-bars fa-lg"></i>
                     </span>
-                    <NavbarBrand className="navbar-brand">IGaming</NavbarBrand>
+                    <NavbarBrand className="navbar-brand order-0">IGaming</NavbarBrand>
+                    <Form inline>
+                        <FormGroup>
+                            <Input type="email" name="email" id="emailInput" placeholder="email" />
+                            <Input type="password" name="password" id="passwordInput" placeholder="password" />
+                        </FormGroup>
+                        <Button className="btn btn-success">Log in</Button>
+                    </Form>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav>
                             <NavItem>

@@ -1,7 +1,7 @@
 @import '../../partials/basics';
 
 
-.navbar-toggler-icon {
+.navbar-toggler {
     color: $accent-color;
 
     &:hover {
@@ -12,13 +12,53 @@
 .navbar-brand {
     font-family: $headingFontStack !important;
     font-weight: 800;
+    font-size: $bl * 1.3;
+    line-height: $bl * 1.6;
+    padding: 2px 0 0 0;
+    margin: 0;
     text-transform: uppercase;
     color: $primary-color !important;
-    min-height: 2em;
+    margin-left: 1rem;
+}
+
+.nav {
+    min-height: 3rem;
 }
 
 .nav-link {
     font-family: $bodyFontStack;
     font-weight: 700;
-    color: $primary-color ;
+    color: $white-color;
+    line-height: $bl;
+    transition: all .3s ease-out;
+    padding: 0;
+    margin: .7rem 1rem;
+    margin-bottom: 0;
+
+    &:hover {
+        color: darken($white-color, 5%);
+        border-bottom: 2px solid $accent-color;
+    }
+}
+
+.navbar {
+    justify-content: flex-start;
+
+    & input {
+        margin: 0 $bl / 4;
+    }
+    
+    & .btn {
+        height: $bl;
+        line-height: 1rem;
+        margin: 0 $bl / 4;
+    }
+}
+
+.form-inline {
+    margin-left: auto;
+}
+
+.form-control {
+    height: $bl;
 }
