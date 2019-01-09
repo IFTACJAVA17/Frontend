@@ -23,17 +23,19 @@ class NavComponent extends Component {
         return (
             <div>
                 <Navbar className="bg-secondary">
-                    <NavbarBrand className="navbar-brand">IGaming</NavbarBrand>
                     <span className="navbar-toggler-icon" onClick={this.toggle}>
                         <i className="fas fa-bars fa-lg"></i>
                     </span>
+                    <NavbarBrand className="navbar-brand">IGaming</NavbarBrand>
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <NavItem>
-                            <NavLink href="/">Länk 1</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/">Länk 2</NavLink>
-                        </NavItem>
+                        <Nav>
+                            <NavItem>
+                                <NavLink href="/">Länk 1</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/">Länk 2</NavLink>
+                            </NavItem>
+                        </Nav>
                     </Collapse>
                 </Navbar>
             </div>

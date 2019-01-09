@@ -16,3 +16,9 @@
     color: $primary-color !important;
     min-height: 2em;
 }
+
+.nav-link {
+    font-family: $bodyFontStack;
+    font-weight: 700;
+    color: $primary-color ;
+}
