@@ -33,8 +33,8 @@ class Tournament extends React.Component {
                   <td>{this.state.tournament.game}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Type</th>
-                  <td>{this.state.tournament.type}</td>
+                  <th scope="row"> Game Type</th>
+                  <td>{this.state.tournament.gameType}</td>
                 </tr>
                 <tr>
                   <th scope="row">Time Left</th>
@@ -42,13 +42,13 @@ class Tournament extends React.Component {
                 </tr>
                 <tr>
                   <th scope="row">Players</th>
-                  <td>{this.state.tournament.players}</td>
+                  <td>{this.state.tournament.players}/{this.state.tournament.totalPlayers}</td>
                 </tr>
               </tbody>
             </Table>
           </div>
           <div>
-            <Button color='primary' size='sm'>Go to Tournament</Button>
+            <Button color='primary' size='sm'>Go to lobby</Button>
           </div>
         </Collapse>
       </div>
