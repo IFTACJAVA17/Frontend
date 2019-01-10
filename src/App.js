@@ -6,6 +6,9 @@ import SidebarComponent from './components/sidebar/sidebar';
 import FeaturedContainerComponent from './components/featuredContainer/featuredContainer';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
 import MockComponent from './components/mockComponent/mockComponent';
+import FriendList from './components/friendlist-component/friendlist';
+import Highscore from './components/highscore/highscore.component';
+import TournamentList from './components/tournament-list-component/tournament-list';
 
 class App extends Component {
 
@@ -17,7 +20,7 @@ class App extends Component {
           <div className="row">
             <div className="col">
               <SidebarComponent>
-                <MockComponent header="Tournaments"/>
+                <TournamentList header="Tournaments" />
                 <MockComponent header="Score" />
               </SidebarComponent>
             </div>
@@ -27,7 +30,7 @@ class App extends Component {
             </div>
             <div className="col">
             <SidebarComponent>
-            <MockComponent header="Friends"/>
+            <FriendList header="Friendzzz"/>
             <MockComponent header="Messages" />
           </SidebarComponent>
             </div>

@@ -10,7 +10,8 @@ class FriendList extends React.Component {
         super(props);
 
         this.state = {
-            friendList: []
+            friendList: [],
+            header: props.header,
         };
     }
 
@@ -20,7 +21,7 @@ class FriendList extends React.Component {
             { id: 1, name: "Kent Larsen", status: true },
             { id: 2, name: "Martin Melin", status: true },
             { id: 3, name: "Ola Melén", status: false },
-            { id: 4, name: "Åsa Vilbeck", status: false }
+            { id: 4, name: "Åsa Vilbeck", status: false },
         ]
 
         this.setState({ friendList: friendList });
@@ -28,15 +29,11 @@ class FriendList extends React.Component {
 
     createTable(friendList) {
 
-        return <div>´
+        return <div>
+                        <div className="header">
+                <h5>{this.state.header}</h5>
+            </div>
             <table className="friendlist-list">
-                <thead className="friendlist-title">
-                    <tr>
-                        <th>
-                            <h3>Vänner</h3>
-                        </th>
-                    </tr>
-                </thead>
                 <tbody>
 
                     {friendList.map((friend) => {

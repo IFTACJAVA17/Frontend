@@ -47,7 +47,7 @@ class Tournament extends React.Component {
             </Table>
           </div>
           <div>
-            <Button color='primary' size='sm'>Go to lobby</Button>
+            <Button className="btn btn-success" size='sm'>Go to lobby</Button>
           </div>
         </Collapse>
       </div>

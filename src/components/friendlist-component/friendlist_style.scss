@@ -1,6 +1,20 @@
 @import "../../partials/basics";
 
 
+
+.header {
+    background-color: lighten($secondary-color, 13%);
+    border-radius: $bl/2 $bl/2 0 0;
+    padding: 10px;
+
+    & h5 {
+        margin-top: .25em;
+        margin-bottom: 0;
+        color: $primary-color;
+        line-height: 1.5em;
+    }
+}
+
 .friendlist-div {
     display: inline;
 }
