@@ -1,0 +1,10 @@
+@import '../../partials/basics';
+
+.sidebar {
+    background-color: $secondary-color;
+    margin: auto;
+    width: 100%;
+    margin-top: $bl * 2;
+    min-height: 80vh;
+    border-radius: $bl/2;
+}
