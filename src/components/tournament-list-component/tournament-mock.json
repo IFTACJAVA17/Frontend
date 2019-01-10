@@ -1,0 +1,52 @@
+[
+    { 
+        "id": 1,
+        "name": "Tournament 1", 
+        "timeLeft": "50 minutes", 
+        "status": "Started", 
+        "players": 16, 
+        "totalPlayers": 16,
+        "game": "Quake Champions", 
+        "gameType": "Deathmatch" 
+    },
+    { 
+        "id": 2,
+        "name": "Tournament 2", 
+        "timeLeft": "50 minutes", 
+        "status": "Waiting for players", 
+        "players": 3, 
+        "totalPlayers": 4, 
+        "game": "Super Smash Bros", 
+        "gameType": "Survival" 
+    },
+    { 
+        "id": 3,
+        "name": "Tournament 3", 
+        "timeLeft": "50 minutes", 
+        "status": "About to start", 
+        "players": 10, 
+        "totalPlayers": 12, 
+        "game": "Mario Kart", 
+        "gameType": "Race" 
+    },
+    { 
+        "id": 4,
+        "name": "Tournament 4", 
+        "timeLeft": "50 minutes", 
+        "status": "1 hour", 
+        "players": 1, 
+        "totalPlayers": 15, 
+        "game": "Ridge Racer", 
+        "gameType": "Survival" 
+    },
+    { 
+        "id": 5,
+        "name": "Tournament 5", 
+        "timeLeft": "50 minutes", 
+        "status": "2 hour", 
+        "players": 0, 
+        "totalPlayers": 10, 
+        "game": "Tekken", 
+        "gameType": "Survival"
+    }
+  ]

@@ -1,0 +1,27 @@
+@import '../../partials/basics';
+
+.tournament-card {
+  background-color: lighten($secondary-color, 5%);
+  size: 20em;
+  color: $white-color;
+
+   & button {
+     margin-left: 17em;
+     margin-bottom: 1em;
+   }
+}
+
+.tournament-card > div:first-child {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: $secondary-color;
+  color: $white-color;
+}
+
+.status-green {
+  border: 0.2em solid $primary-color;
+  border-radius: 0.5em;
+  background-color: $primary-color;
+  color: $black-color;
+  margin-left: 2em;
+}
