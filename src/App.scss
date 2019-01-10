@@ -1,0 +1,12 @@
+@import './partials/colors';
+@import './partials//typography';
+
+.App {
+  background-color: lighten($secondary-color, 5%);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 1400px !important;
+}
