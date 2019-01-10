@@ -1,0 +1,10 @@
+@import '../../partials/basics';
+
+.featured-container {
+    background-color: $secondary-color;
+    width: 100%;
+    margin: auto;
+    margin-top: $bl * 2;
+    min-height: 20vh;
+    border-radius: $bl/2;
+}
