@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Row, Col } from 'reactstrap';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faIgloo } from '@fortawesome/free-solid-svg-icons'
-import Firebase from '../Firebase/firebase.js';
+import { signInWithEmailAndPassword, signInWithProvider, googleProvider } from '../Firebase/firebase.js';
 
 
 library.add(faIgloo)
@@ -17,8 +17,8 @@ const INITIAL_STATE = {
 class SigninButtons extends React.Component {
 
     testLogin(){
-    Firebase.doSignIn(INITIAL_STATE.email, INITIAL_STATE.password);
-    
+        //signInWithEmailAndPassword(INITIAL_STATE.email, INITIAL_STATE.password);
+        signInWithProvider(googleProvider); //loggar in med google. 
     }
     
     render (){

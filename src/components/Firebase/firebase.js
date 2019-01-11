@@ -1,5 +1,4 @@
-import app from 'firebase/app';
-import 'firebase/auth';
+import firebase from 'firebase';
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -8,23 +7,30 @@ const config = {
     projectId: process.env.REACT_APP_PROJECT_ID,
     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  };
+};
 
-  class Firebase {
-      constructor(){
-          app.initializeApp(config);
+firebase.initializeApp(config);
 
-          this.auth = app.auth();
-      }
+export function signInWithEmailAndPassword(email, password){
+    firebase.auth().signInWithEmailAndPassword(email,password).then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err)
+    });
+}
 
-      doSignIn(email, password){
-        this.auth.signInWithEmailAndPassword(email, password);
-      }
-      
+export function signInWithProvider(provider){
+    firebase.auth().signInWithPopup(provider)
+    .then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err)
+    });
+}
 
-      doSignOut = () => this.auth.signOut();
+export function doSignOut() {
+    firebase.auth.signOut()
+}
 
-  }
-
-
-  export default Firebase;
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+export default firebase;

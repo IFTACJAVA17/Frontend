@@ -10,6 +10,7 @@ import MockComponent from './components/mockComponent/mockComponent';
 class App extends Component {
 
   render() {
+    console.log(process.env.REACT_APP_API_KEY)
     return (
       <div className="App">
         <NavComponent />
@@ -17,7 +18,7 @@ class App extends Component {
           <div className="row">
             <div className="col">
               <SidebarComponent>
-                <MockComponent header="Tournaments"/>
+                <MockComponent header="Tournaments" />
                 <MockComponent header="Score" />
               </SidebarComponent>
             </div>
@@ -26,10 +27,10 @@ class App extends Component {
               <GamesContainerComponent text="Games overview" />
             </div>
             <div className="col">
-            <SidebarComponent>
-            <MockComponent header="Friends"/>
-            <MockComponent header="Messages" />
-          </SidebarComponent>
+              <SidebarComponent>
+                <MockComponent header="Friends" />
+                <MockComponent header="Messages" />
+              </SidebarComponent>
             </div>
           </div>
         </div>
