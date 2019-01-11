@@ -2,7 +2,6 @@ import React from 'react';
 //import { googleProvider, facebookProvider } from '../bin/firebase.js';
 import { Button, Row, Col } from 'reactstrap';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import Firebase from '../Firebase/firebase.js';
 
@@ -16,10 +15,6 @@ const INITIAL_STATE = {
 }
 
 class SigninButtons extends React.Component {
-
-    constructor(props){
-        super(props);
-    }
 
     testLogin(){
     Firebase.doSignIn(INITIAL_STATE.email, INITIAL_STATE.password);

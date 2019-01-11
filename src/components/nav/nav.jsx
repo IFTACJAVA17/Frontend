@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavbarBrand, Dropdown, NavItem, NavLink, Collapse, FormGroup, Form, Button, Input } from 'reactstrap';
+import {Navbar, Nav, NavbarBrand,  NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
 import './nav.scss';
 import Popup from "reactjs-popup";
 import LoginContent from '../login-component/LoginContent';
