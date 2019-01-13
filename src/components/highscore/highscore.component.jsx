@@ -70,6 +70,7 @@ export default class Highscore extends Component {
         return (
 
             <Carousel
+                className="scoreCarousel"
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
