@@ -3,6 +3,8 @@ import './friendlist_style.scss';
 import Popup from "reactjs-popup";
 import Friend from "./Friend";
 import FriendInput from "./FriendInput";
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import PerfectScrollbar from'react-perfect-scrollbar';
 
 class FriendList extends React.Component {
 
@@ -29,26 +31,25 @@ class FriendList extends React.Component {
 
     createTable(friendList) {
 
-        return <div>
-                        <div className="header">
-                <h5>{this.state.header}</h5>
-            </div>
-            <table className="friendlist-list">
-                <tbody>
-
-                    {friendList.map((friend) => {
-                        return <Friend friend={friend} />
-                    })}
-
-                    <Popup className="popup-style" trigger={<button className="btn btn-primary add-friend-button">Lägg till vän</button>}
-                        position="left center">
-                        <FriendInput />
-                    </Popup>
-
-                </tbody>
-            </table>
-        </div>;
-
+        return (
+        <div className="friendlistContainer"> 
+            <div className="header">
+            <h5>{this.state.header}</h5>
+        </div>
+        <PerfectScrollbar>
+        <table className="friendlist-list">
+            <tbody>
+                {friendList.map((friend) => {
+                    return <Friend friend={friend} />
+                })}
+                <Popup className="popup-style" trigger={<button className="btn btn-success add-friend-button">Lägg till vän</button>}
+                    position="left center">
+                    <FriendInput />
+                </Popup>
+            </tbody>
+        </table>
+        </PerfectScrollbar>
+        </div>);
     }
 
     render() {

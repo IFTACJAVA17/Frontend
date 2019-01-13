@@ -1,0 +1,26 @@
+@import "../../partials/basics";
+
+.col:first-of-type {
+    text-align: left;
+}
+
+.col {
+    text-align: center;
+}
+
+.col:last-of-type {
+    text-align: right;
+}
+
+.row:first-of-type {
+    padding: 1em 0;
+}
+
+.row {
+    padding: 0;
+    color: $white-color;
+
+    & p {
+        line-height: $bl /2;
+    }
+}

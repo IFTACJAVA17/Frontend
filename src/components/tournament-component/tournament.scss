@@ -10,6 +10,17 @@
    }
 }
 
+.tournament {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse {
+  border: 1px solid $secondary-color;
+  border-top: 0;
+  border-bottom: 0;
+}
+
 .tournament-card > div:first-child {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -22,5 +33,5 @@
   border-radius: 0.5em;
   background-color: $primary-color;
   color: $black-color;
-  margin-left: 2em;
+  margin-right: 1em;
 }

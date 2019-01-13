@@ -20,7 +20,7 @@ class Tournament extends React.Component {
   render(props) {
     return (
       <div className='tournament-card'>
-        <div onClick={this.toggle}>
+        <div className="tournament" onClick={this.toggle}>
           <span>{this.state.tournament.name}</span><span className='status-green'>{this.state.tournament.status}</span>
         </div>
         <Collapse isOpen={this.state.collapse}>
@@ -32,7 +32,7 @@ class Tournament extends React.Component {
                   <td>{this.state.tournament.game}</td>
                 </tr>
                 <tr>
-                  <th scope="row"> Game Type</th>
+                  <th scope="row">Game Type</th>
                   <td>{this.state.tournament.gameType}</td>
                 </tr>
                 <tr>

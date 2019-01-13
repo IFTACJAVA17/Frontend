@@ -1,6 +1,9 @@
 @import "../../partials/basics";
 
-
+.friendlistContainer {
+    height: 24em;
+    overflow: hidden;
+}
 
 .header {
     background-color: lighten($secondary-color, 13%);
@@ -25,7 +28,9 @@
 
 .friendlist-list {
     background-color: $secondary-color;
-    width: 300px;
+    width: 100%;
+
+
 }
 
 .friendlist-span {
@@ -77,6 +82,7 @@ h3 {
     background-color: lighten($secondary-color, 10%) !important;
     border-radius: 15px;
     border-color: black !important;
+    z-index: 100;
     
 }
 

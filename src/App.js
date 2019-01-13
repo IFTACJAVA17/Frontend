@@ -9,6 +9,7 @@ import MockComponent from './components/mockComponent/mockComponent';
 import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
+import ScoreList from './components/highscore/rankinglist.component';
 
 class App extends Component {
 
@@ -21,7 +22,7 @@ class App extends Component {
             <div className="col">
               <SidebarComponent>
                 <TournamentList header="Tournaments" />
-                <MockComponent header="Score" />
+                <Highscore />
               </SidebarComponent>
             </div>
             <div className="col-7">
