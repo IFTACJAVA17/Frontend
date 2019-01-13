@@ -8,6 +8,10 @@
     padding: 1em;
     padding-bottom: 0;
     border-radius: $bl/2;
+
+    & .carousel-indicators {
+        margin-bottom: 0;
+    }
 }
 
 .featuredImage {
@@ -19,7 +23,7 @@
     & h5 {
         padding: 0;
         margin: 0;
-        margin-bottom: .5em;
+        padding-bottom: 1em;
     }
 }
 

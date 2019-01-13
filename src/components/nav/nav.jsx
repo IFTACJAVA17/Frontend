@@ -27,13 +27,7 @@ class NavComponent extends Component {
                         <i className="fas fa-bars fa-lg"></i>
                     </span>
                     <NavbarBrand className="navbar-brand order-0">IGaming</NavbarBrand>
-                    <Form inline>
-                        <FormGroup>
-                            <Input type="email" name="email" id="emailInput" placeholder="email" />
-                            <Input type="password" name="password" id="passwordInput" placeholder="password" />
-                        </FormGroup>
-                        <Button className="btn btn-success">Log in</Button>
-                    </Form>
+                    <Button className="btn btn-success">Log in</Button>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav>
                             <NavItem>

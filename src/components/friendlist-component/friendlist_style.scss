@@ -60,8 +60,6 @@
 }
 
 .add-friend-button {
-    background-color: $primary-color;
-    color: $secondary-color;
     float:right;
     margin-right: 1em;
     margin-top: 1em;
@@ -82,7 +80,8 @@ h3 {
     background-color: lighten($secondary-color, 10%) !important;
     border-radius: 15px;
     border-color: black !important;
-    z-index: 100;
+    width: 100%;
+ 
     
 }
 

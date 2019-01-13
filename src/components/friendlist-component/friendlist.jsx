@@ -43,7 +43,7 @@ class FriendList extends React.Component {
                     return <Friend friend={friend} />
                 })}
                 <Popup className="popup-style" trigger={<button className="btn btn-success add-friend-button">Lägg till vän</button>}
-                    position="left center">
+                    position="left center" keepTooltipInside=".friendlist-list">
                     <FriendInput />
                 </Popup>
             </tbody>
