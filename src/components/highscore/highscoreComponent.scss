@@ -6,8 +6,23 @@
 
 .carouselArrow {
     color: $accent-color;
+    position: absolute;
+    display: flex;
+    top: 5.4em;
+    height: 20px;
+}
+
+.carouselContainer {
+    position: relative;
 }
 
 .carousel {
-    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    & h5 {
+        margin-bottom: 0;
+        margin-top: 3em;
+    }
 }

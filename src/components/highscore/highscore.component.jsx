@@ -83,7 +83,7 @@ export default class Highscore extends Component {
 
     render() {
         return (
-            <div>
+            <div className="carouselContainer">
                 <div className="header">
                     <h5>Score</h5>
                 </div>
