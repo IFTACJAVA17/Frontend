@@ -6,6 +6,7 @@ import SidebarComponent from './components/sidebar/sidebar';
 import FeaturedContainerComponent from './components/featuredContainer/featuredContainer';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
 import MockComponent from './components/mockComponent/mockComponent';
+import GameLayoutComponent from './components/gamelayoutComponent/gameLayout.component';
 
 class App extends Component {
 
@@ -22,8 +23,9 @@ class App extends Component {
               </SidebarComponent>
             </div>
             <div className="col-7">
-              <FeaturedContainerComponent text="Featured Games" />
-              <GamesContainerComponent text="Games overview" />
+              {/*<FeaturedContainerComponent text="Featured Games" /> */}
+              
+              <GameLayoutComponent text="Game Layout" />
             </div>
             <div className="col">
             <SidebarComponent>
