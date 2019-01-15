@@ -34,19 +34,19 @@ class FriendList extends React.Component {
         return (
         <div className="friendlistContainer"> 
             <div className="header">
-            <h5>{this.state.header}</h5>
-        </div>
+                <h5>{this.state.header}</h5>
+            </div>
         <PerfectScrollbar>
         <table className="friendlist-list">
             <tbody>
                 {friendList.map((friend) => {
                     return <Friend friend={friend} />
                 })}
+            </tbody>
                 <Popup className="popup-style" trigger={<button className="btn btn-success add-friend-button">Lägg till vän</button>}
                     position="left center" keepTooltipInside=".friendlist-list">
                     <FriendInput />
                 </Popup>
-            </tbody>
         </table>
         </PerfectScrollbar>
         </div>);
