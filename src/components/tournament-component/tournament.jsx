@@ -21,7 +21,7 @@ class Tournament extends React.Component {
     return (
       <div className='tournament-card'>
         <div className="tournament" onClick={this.toggle}>
-          <span>{this.state.tournament.name}</span><span className='status-green'>{this.state.tournament.status}</span>
+          <span>{this.state.tournament.name}</span><span className={`time-bubble ${this.state.tournament.status}`}>{this.state.tournament.status}</span>
         </div>
         <Collapse isOpen={this.state.collapse}>
           <div>
