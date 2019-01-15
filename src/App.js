@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavComponent from './components/nav/nav';
-import SidebarComponent from './components/sidebar/sidebar';
-import FeaturedContainerComponent from './components/featuredContainer/featuredContainer';
-import GamesContainerComponent from './components/gamesContainer/gamesContainer';
-import MockComponent from './components/mockComponent/mockComponent';
+//import NavComponent from './components/nav/nav';
+//import SidebarComponent from './components/sidebar/sidebar';
+//import FeaturedContainerComponent from './components/featuredContainer/featuredContainer';
+//import GamesContainerComponent from './components/gamesContainer/gamesContainer';
+//import MockComponent from './components/mockComponent/mockComponent';
+import AppRouter from './components/reduxTestComponent/router';
+import { connect } from 'react-redux';
+import { fetchUser} from './redux/actions'
 
 class App extends Component {
 
+  componentWillMount() {
+    this.props.fetchUser();
+  }
+
+  render(){
+    return <AppRouter />
+  }
+  /*
   render() {
     return (
       <div className="App">
@@ -35,7 +46,8 @@ class App extends Component {
         </div>
       </div>
     );
-  }
+  } 
+  */
 }
 
-export default App;
+export default connect(null, { fetchUser })(App);
