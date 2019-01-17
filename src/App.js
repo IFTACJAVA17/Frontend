@@ -3,9 +3,12 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
-import FeaturedContainerComponent from './components/featuredContainer/featuredContainer';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
 import MockComponent from './components/mockComponent/mockComponent';
+import FriendList from './components/friendlist-component/friendlist';
+import Highscore from './components/highscore/highscore.component';
+import TournamentList from './components/tournament-list-component/tournament-list';
+import FeaturedComponent from './components/featuredComponent/featured.component';
 
 class App extends Component {
 
@@ -17,17 +20,17 @@ class App extends Component {
           <div className="row">
             <div className="col">
               <SidebarComponent>
-                <MockComponent header="Tournaments"/>
-                <MockComponent header="Score" />
+                <TournamentList header="Tournaments" />
+                <Highscore />
               </SidebarComponent>
             </div>
             <div className="col-7">
-              <FeaturedContainerComponent text="Featured Games" />
+              <FeaturedComponent />
               <GamesContainerComponent text="Games overview" />
             </div>
             <div className="col">
             <SidebarComponent>
-            <MockComponent header="Friends"/>
+            <FriendList header="Friendzzz"/>
             <MockComponent header="Messages" />
           </SidebarComponent>
             </div>

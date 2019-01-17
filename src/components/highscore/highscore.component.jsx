@@ -3,6 +3,7 @@ import { CarouselItem, Carousel, CarouselControl } from 'reactstrap';
 
 import HighscoreData from './highscore-mock.json';
 import ScoreList from './rankinglist.component.jsx';
+import './highscoreComponent.scss';
 
 export default class Highscore extends Component {
 
@@ -48,35 +49,47 @@ export default class Highscore extends Component {
         this.setState({ activeIndex: newIndex });
     }
 
-    render() {
+    renderScores() {
         const { activeIndex, rankings } = this.state;
-
-       
 
         const slides = rankings.map((ranking) => {
             const scores = ranking.scores.sort((a,b) => b.score - a.score);
             return (
-                <CarouselItem
-                    onExiting={this.onExiting}
-                    onExited={this.onExited}
-                    key={ranking.gameId}
-                >
-                    <h5>{ranking.gameName}</h5>
-                    <ScoreList scores={scores} />
+
+            <CarouselItem
+                onExiting={this.onExiting}
+                onExited={this.onExited}
+                key={ranking.gameId}
+            >
+                <h5 className="text-primary">{ranking.gameName}</h5>
+                <ScoreList scores={scores} />
             </CarouselItem>
             );
         });
 
         return (
+
             <Carousel
+                className="scoreCarousel"
                 activeIndex={activeIndex}
                 next={this.next}
                 previous={this.previous}
             >
                 {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                <CarouselControl className="carouselArrow" direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                <CarouselControl className="carouselArrow" direction="next" directionText="Next" onClickHandler={this.next} />
             </Carousel>
+        );
+    }
+
+    render() {
+        return (
+            <div className="carouselContainer">
+                <div className="header">
+                    <h5>Score</h5>
+                </div>
+                {this.renderScores()}
+            </div>
         );
     }
 }

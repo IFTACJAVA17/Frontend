@@ -52,13 +52,6 @@
         height: $bl;
         line-height: 1rem;
         margin: 0 $bl / 4;
+        margin-left: auto;
     }
-}
-
-.form-inline {
-    margin-left: auto;
-}
-
-.form-control {
-    height: $bl;
 }
