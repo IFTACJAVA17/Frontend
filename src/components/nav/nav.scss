@@ -52,6 +52,7 @@
         height: $bl;
         line-height: 1rem;
         margin: 0 $bl / 4;
+        margin-left: auto;
     }
 }
 
@@ -62,3 +63,9 @@
 .form-control {
     height: $bl;
 }
+
+.popup-style {
+    border: none !important;
+    background-color: black !important;
+}
+

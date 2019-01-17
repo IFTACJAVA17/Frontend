@@ -6,9 +6,19 @@
   color: $white-color;
 
    & button {
-     margin-left: 17em;
      margin-bottom: 1em;
    }
+}
+
+.tournament {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse {
+  border: 1px solid $secondary-color;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .tournament-card > div:first-child {
@@ -18,10 +28,27 @@
   color: $white-color;
 }
 
-.status-green {
-  border: 0.2em solid $primary-color;
+.time-bubble {
   border-radius: 0.5em;
-  background-color: $primary-color;
-  color: $black-color;
-  margin-left: 2em;
+  margin-right: 1em;
+  padding: 0 .2em 0 .2em;
+
+  &.Started {   
+    border: .2em solid $primary-color;
+    background-color: $primary-color;
+    color: $black-color;
+  }
+
+  &.One {
+    border: .2em solid $accent-color;
+    background-color: $accent-color;
+    color: $black-color;
+  }
+
+  &.Five, &.Tomorrow {
+    border: .2em solid $accent-dark-color;
+    background-color: $accent-dark-color;
+    color: $white-color;
+  }
+
 }

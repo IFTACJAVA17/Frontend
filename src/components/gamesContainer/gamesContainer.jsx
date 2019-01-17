@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './gamesContainer.scss';
+import gameLibraryShow from '../gamelibraryComponent/gamelibrary.component';
+
 
 const center = {
     textAlign: 'center',
@@ -9,7 +11,7 @@ const center = {
 const GamesContainerComponent = (props) => {
     return (
         <div className="games-container">
-            <h4 style={center}>{props.text}</h4>
+            <gameLibraryShow></gameLibraryShow>
         </div>
     );
 }

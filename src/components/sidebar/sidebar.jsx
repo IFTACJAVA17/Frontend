@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './sidebar.scss';
 
 const SidebarComponent = (props) => {

@@ -1,0 +1,32 @@
+@import "../../partials/basics";
+
+.login-title{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color:black !important;
+}
+
+.login-div {
+    border: solid black 2px;
+    background-color: lighten($secondary-color, 20%);
+}
+
+.login-button-div {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+.signin-button-row {
+    margin-top: 5%;
+}
+
+.signin-button {
+    width: 20%;
+    height: 150% !important;
+}
+
+.icon-fixer {
+    vertical-align:middle !important;
+}
