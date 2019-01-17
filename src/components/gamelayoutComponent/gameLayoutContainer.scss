@@ -1,0 +1,16 @@
+@import '../../partials/basics';
+
+.gamelayout-container {
+    background-color: $secondary-color;
+    width: 100%;
+    margin: auto;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    padding: $bl/2;
+    min-height: 81vh;
+    border-radius: $bl/2;
+
+    & h4 {
+        margin-top: 0;
+    }
+}
