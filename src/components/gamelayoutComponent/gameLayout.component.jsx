@@ -21,8 +21,6 @@ export default class GameLayout extends Component {
         }
         const { images } = this.state;
         
-        console.log(images);
-        
         return (
             <div className='gamelayout-container'>
              
