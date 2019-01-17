@@ -6,9 +6,7 @@ export default class Images extends Component {
     render() {
         const { image } = this.props;
         let toRender;
-        console.log(image.src2)
         if (image.src2 === "" || image.src2 === undefined) {
-            console.log(image)
             toRender = (
             <Row className="featuredImage">
                 <Col>
