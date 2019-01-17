@@ -48,7 +48,6 @@ export default class FeaturedComponent extends Component {
 
       render() {
         const { activeIndex, images } = this.state;
-        console.log(images);
         let counter = 0;
         const slides = images.map((image) => {
           return (
