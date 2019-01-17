@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption  } from 'reactstrap';
+import { Carousel, CarouselIndicators, CarouselControl, CarouselItem } from 'reactstrap';
 import Images from './images.component';
 
 import ImageData from './images-mock.json';
