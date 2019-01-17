@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavbarBrand, NavItem, NavLink, Collapse, Button } from 'reactstrap';
+import {Navbar, Nav, NavbarBrand,  NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
 import './nav.scss';
+import Popup from "reactjs-popup";
+import LoginContent from '../login-component/LoginContent';
 
 class NavComponent extends Component {
 
@@ -27,7 +29,12 @@ class NavComponent extends Component {
                         <i className="fas fa-bars fa-lg"></i>
                     </span>
                     <NavbarBrand className="navbar-brand order-0">IGaming</NavbarBrand>
-                    <Button className="btn btn-success">Log in</Button>
+                    <Form inline>
+                    <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Log in</Button>}>
+                    <LoginContent/>
+                    </Popup>
+                        
+                    </Form>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav>
                             <NavItem>
