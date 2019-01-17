@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavbarBrand,  NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
+import { Navbar, Nav, NavbarBrand, NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
 import './nav.scss';
 import Popup from "reactjs-popup";
 import LoginContent from '../login-component/LoginContent';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/actions/index';
 
 class NavComponent extends Component {
 
@@ -21,7 +23,22 @@ class NavComponent extends Component {
         }));
     }
 
+    signMethod() {
+        if (this.props.user == null) {
+            return (
+                <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Sign in</Button>}>
+                    <LoginContent />
+                </Popup>
+            );
+        } else {
+            return (
+                <button className="btn btn-success" onClick={actions.signOut()}>Sign out</button>
+            );
+        }
+    }
+
     render() {
+        console.log(this.props.user);
         return (
             <div>
                 <Navbar className="bg-secondary">
@@ -30,10 +47,7 @@ class NavComponent extends Component {
                     </span>
                     <NavbarBrand className="navbar-brand order-0">IGaming</NavbarBrand>
                     <Form inline>
-                    <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Log in</Button>}>
-                    <LoginContent/>
-                    </Popup>
-                        
+                        {this.signMethod()}
                     </Form>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav>
@@ -51,4 +65,8 @@ class NavComponent extends Component {
     }
 }
 
-export default NavComponent;
+const mapStateToProps = ({ user }) => {
+    return { user };
+}
+
+export default connect(mapStateToProps, actions)(NavComponent);
