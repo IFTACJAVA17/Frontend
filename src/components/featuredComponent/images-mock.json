@@ -1,17 +1,17 @@
 [
     {
-      "src1": "https://files.slack.com/files-pri/T6X89SH6C-FFG6LM961/ska__rmavbild_2019-01-17_kl._11.01.30.png",
+      "src1": "./assets/spel.png",
       "game": "Game 1",
       "altText": "Text 1"
     },
     {
-      "src1": "https://files.slack.com/files-pri/T6X89SH6C-FFG6LM961/ska__rmavbild_2019-01-17_kl._11.01.30.png",
-      "src2": "https://files.slack.com/files-pri/T6X89SH6C-FFG6LM961/ska__rmavbild_2019-01-17_kl._11.01.30.png",
+      "src1": "./assets/spel.png",
+      "src2": "./assets/spel.png",
       "game": "Game 2",
       "altText": "Text 2"
     },
     {
-      "src1": "https://files.slack.com/files-pri/T6X89SH6C-FFG6LM961/ska__rmavbild_2019-01-17_kl._11.01.30.png",
+      "src1": "./assets/spel.png",
       "game": "Game 3",
       "altText": "Text 3"
     }
