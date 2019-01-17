@@ -12,7 +12,7 @@ export default class Images extends Component {
             toRender = (
             <Row className="featuredImage">
                 <Col>
-                    <img src={image.src1} alt={image.altText} />
+                    <img src={image.src1} alt={image.altText} width="35%" />
                     <h5 className="text-primary">{image.game}</h5>
                 </Col>
             </Row>);
@@ -20,11 +20,11 @@ export default class Images extends Component {
             toRender = (
                 <Row className="featuredImage">
                     <Col>
-                        <img src={image.src1} alt={image.altText} />
+                        <img src={image.src1} alt={image.altText} width="50%" />
                         <h5 className="text-primary">{image.game}</h5>
                     </Col>
                     <Col>
-                        <img src={image.src2} alt={image.altText} />
+                        <img src={image.src2} alt={image.altText} width="50%" />
                         <h5 className="text-primary">{image.game}</h5>
                     </Col>
                 </Row>
