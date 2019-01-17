@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 
+import './rankinglistComponent.scss';
+
 
 export default class ScoreList extends Component {
 
@@ -16,7 +18,15 @@ export default class ScoreList extends Component {
         const scores = this.state.scores.map(score => {
             return (
                 <Row key={score.userId}>
-                    <Col>{rank = rank + 1}</Col> <Col>{score.userName}</Col> <Col>{score.score}</Col> 
+                    <Col>
+                    <p>{rank = rank + 1}</p>
+                    </Col>
+                    <Col>
+                    <p>{score.userName}</p>
+                    </Col>
+                    <Col>
+                    <p>{score.score}</p>
+                    </Col> 
                 </Row>
             )
         });

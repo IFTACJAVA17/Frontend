@@ -2,10 +2,9 @@
 
 .tournament-container {
     height: 24em;
-    width: 24em;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: $secondary-color;
+    border-radius: $bl/2 $bl/2 0 0;
 
 
     & .header {

@@ -9,13 +9,26 @@ export default class Images extends Component {
         console.log(image.src2)
         if (image.src2 === "" || image.src2 === undefined) {
             console.log(image)
-            toRender = <div><img src={image.src1} alt={image.altText} /> </div>;
+            toRender = (
+            <Row className="featuredImage">
+                <Col>
+                    <img src={image.src1} alt={image.altText} />
+                    <h5 className="text-primary">{image.game}</h5>
+                </Col>
+            </Row>);
         } else {
             toRender = (
-                <Row>
-                    <Col><img src={image.src1} alt={image.altText} /></Col><Col><img src={image.src2} alt={image.altText} /></Col>
+                <Row className="featuredImage">
+                    <Col>
+                        <img src={image.src1} alt={image.altText} />
+                        <h5 className="text-primary">{image.game}</h5>
+                    </Col>
+                    <Col>
+                        <img src={image.src2} alt={image.altText} />
+                        <h5 className="text-primary">{image.game}</h5>
+                    </Col>
                 </Row>
-            )
+            );
         }
         return (
             toRender

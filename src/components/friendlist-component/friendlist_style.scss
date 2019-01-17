@@ -1,5 +1,22 @@
 @import "../../partials/basics";
 
+.friendlistContainer {
+    height: 24em;
+    overflow: hidden;
+}
+
+.header {
+    background-color: lighten($secondary-color, 13%);
+    border-radius: $bl/2 $bl/2 0 0;
+    padding: 10px;
+
+    & h5 {
+        margin-top: .25em;
+        margin-bottom: 0;
+        color: $primary-color;
+        line-height: 1.5em;
+    }
+}
 
 .friendlist-div {
     display: inline;
@@ -11,7 +28,9 @@
 
 .friendlist-list {
     background-color: $secondary-color;
-    width: 300px;
+    width: 100%;
+
+
 }
 
 .friendlist-span {
@@ -41,8 +60,6 @@
 }
 
 .add-friend-button {
-    background-color: $primary-color;
-    color: $secondary-color;
     float:right;
     margin-right: 1em;
     margin-top: 1em;
@@ -63,6 +80,8 @@ h3 {
     background-color: lighten($secondary-color, 10%) !important;
     border-radius: 15px;
     border-color: black !important;
+    width: 100%;
+ 
     
 }
 

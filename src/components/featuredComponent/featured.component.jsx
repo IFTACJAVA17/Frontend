@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Carousel, CarouselIndicators, CarouselControl, CarouselItem, CarouselCaption  } from 'reactstrap';
+import { Carousel, CarouselIndicators, CarouselControl, CarouselItem } from 'reactstrap';
 import Images from './images.component';
 
 import ImageData from './images-mock.json';
+import './featuredComponent.scss';
 
-export default class Featured extends Component {
+export default class FeaturedComponent extends Component {
 
     constructor(props){
         super(props);
@@ -56,23 +57,24 @@ export default class Featured extends Component {
                 onExited={this.onExited}
                 key={counter = counter + 1}
             >
-                <Images image={image} />
-              <CarouselCaption captionText={image.game} captionHeader={image.game} />
+              <Images image={image} />
             </CarouselItem>
           )
         });
     
         return (
-          <Carousel
-            activeIndex={activeIndex}
-            next={this.next}
-            previous={this.previous}
-          >
-            <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-          </Carousel>
+          <div className="featuredContainer">
+            <Carousel
+              activeIndex={activeIndex}
+              next={this.next}
+              previous={this.previous}
+              >
+              <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+              {slides}
+              <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+              <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+            </Carousel>
+          </div>
         );
       }
 }

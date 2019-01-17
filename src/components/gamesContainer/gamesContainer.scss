@@ -3,8 +3,8 @@
 .games-container {
     background-color: $secondary-color;
     width: 100%;
-    margin: auto;
-    margin-top: $bl;
+    margin: $bl auto $bl auto;
+
     padding: $bl/2;
     min-height: 57vh;
     border-radius: $bl/2;
