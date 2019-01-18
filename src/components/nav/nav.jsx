@@ -24,7 +24,7 @@ class NavComponent extends Component {
     }
 
     signMethod() {
-        if (this.props.user == null) {
+        if (this.props.user.uid === 'guestId') {
             return (
                 <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Sign in</Button>}>
                     <LoginContent />

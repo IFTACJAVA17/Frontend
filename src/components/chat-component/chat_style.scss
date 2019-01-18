@@ -1,28 +1,83 @@
 @import "../../partials/basics";
 
-.texty {
+.chat-area {
     background: lighten($secondary-color, 13%); 
     color: white;
     width: 89%;
-    height: 300px;
+    height: 490px;
     border-top-right-radius: 14px;
     border-top-left-radius: 14px;
     border-width: 8px;
     border-color: lighten($secondary-color, 13%);
     resize: none;
-    font-style: italic;
-    
+    margin: 1em auto 0.5em auto;
+    padding-top: 0.5em;
+    overflow-y: auto;
 }
 
-.inputy {
+.input {
     width: 89%;
     border-bottom-right-radius: 14px;
     border-bottom-left-radius: 14px;
     border: solid;
-    border-width: 8px;
-    border-color: white;
-    margin-bottom: 10%;
-    margin-top: -2.5%;
-    font-style: italic;
-    outline-width: 0;
+    border-width: 0.4em;
+    background-color: $white-color;
+    border-color: $white-color;
+    font-size: 0.85em;
+}
+
+.sender-box, .me-box {
+    padding: 0.2em 0.5em 0.3em 0.5em;
+    margin: 0.1em 0.3em 0.3em 0.5em;
+    border-radius: 12px;
+    font-size: 0.9em;
+    display:inline-block;
+    color: darken($white-color, 5%);
+}
+
+.sender-box {
+    background-color: lighten($secondary-color, 8%);
+}
+
+.me-box {
+    background-color: lighten($secondary-color, 4%);
+}
+
+.sender-container {
+    text-align: left;
+}
+.me-container {
+    text-align: right;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.me {
+    margin: 0.3em 0.5em;
+    text-align: right;
+    color: $primary-color;
+}
+
+.sender {
+    margin: 0.3em 0.8em;
+    text-align: left;
+    color: darken($secondary-color, 10%);
+}
+
+.chat-area::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.chat-area::-webkit-scrollbar-track {
+    margin-top: 0.5em;
+    border-radius: 10px;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    background-color: lighten($secondary-color, 5%);
 }

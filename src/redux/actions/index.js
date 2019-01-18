@@ -15,7 +15,7 @@ export const fetchUser = () => dispatch => {
         } else {
             dispatch({
                 type: FETCH_USER,
-                payload: null
+                payload: { displayName: 'Guest', uid: 'guestId' }
             });
         }
     });

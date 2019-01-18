@@ -39,10 +39,10 @@ class App extends Component {
               <gameLibraryComponent></gameLibraryComponent>
             </div>
             <div className="col">
-            <SidebarComponent>
-            <FriendList header="Friendzzz"/>
-            <Chat header="Messagezzz" />
-          </SidebarComponent>
+              <SidebarComponent>
+                <FriendList header="Friendzzz" />
+                <Chat />
+              </SidebarComponent>
             </div>
           </div>
         </div>
