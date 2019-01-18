@@ -32,13 +32,22 @@ class NavComponent extends Component {
             );
         } else {
             return (
-                <button className="btn btn-success" onClick={actions.signOut()}>Sign out</button>
+                <div className="row1">
+                    <div className="column1">
+                        <img className="profile-picture" src={this.props.user.photoURL} alt="PP" height="40px" width="40px" />
+                    </div>
+                    <div className="column2">
+                        <p>{this.props.user.displayName}</p>
+                    </div>
+                    <div className="column3">
+                        <button className="btn btn-success sign-out-fix" onClick={actions.signOut()}>Sign out</button>
+                    </div>
+                </div>
             );
         }
     }
 
     render() {
-        console.log(this.props.user);
         return (
             <div>
                 <Navbar className="bg-secondary">

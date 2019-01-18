@@ -69,3 +69,40 @@
     background-color: black !important;
 }
 
+.row1 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+.column1 {
+    display:flex;
+    flex-direction:column;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
+.column2 {
+    display:flex;
+    flex-direction:column;
+    margin-right: 5%;
+    width: 100%;
+    color: $primary-color;
+    font-weight: bold;
+
+}
+
+.column3 {
+    display:flex;
+    flex-direction:column;
+    margin-right: 5%;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    border: 2px $primary-color solid;
+}
+
+.sign-out-fix {
+    height: 3.3rem !important;
+}
