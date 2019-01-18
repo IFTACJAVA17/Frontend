@@ -1,14 +1,14 @@
 @import "../../partials/basics";
 
 .chat-area {
-    background: lighten($secondary-color, 13%); 
+    background: lighten($secondary-color, 9%); 
     color: white;
     width: 89%;
     height: 490px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-width: 8px;
-    border-color: lighten($secondary-color, 13%);
+    border-color: lighten($secondary-color, 9%);
     resize: none;
     margin: 0.7em auto 0.5em auto;
     padding-top: 0.2em;
@@ -35,19 +35,19 @@
     color: darken($white-color, 5%);
 }
 
-.me-box {
-    background-color: lighten($secondary-color, 8%);
+.sender-box {
+    background-color: lighten($secondary-color, 6%);
 }
 
-.sender-box {
-    background-color: lighten($secondary-color, 4%);
+.me-box {
+    background-color: lighten($secondary-color, 3%);
 }
 
 .me-container {
-    text-align: left;
+    text-align: right;
 }
 .sender-container {
-    text-align: right;
+    text-align: left;
 }
 
 .name {
@@ -55,13 +55,13 @@
     font-size: 0.8em;
 }
 
-.sender {
+.me {
     margin: 0.3em 0.5em;
     text-align: right;
     color: $primary-color;
 }
 
-.me {
+.sender {
     margin: 0.3em 0.8em;
     text-align: left;
     color: darken($secondary-color, 10%);

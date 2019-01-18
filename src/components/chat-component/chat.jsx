@@ -62,21 +62,18 @@ class Chat extends Component {
     render() {
         let counter = 0;
         const messages = Object.keys(this.state.messages).map(message => {
-            const time = new Date(this.state.messages[message]['time']);
-            console.log(time);
-            let showTime = false;
-            if (this.state.messages[message]['me'] === this.props.user.displayName)
+            if (this.state.messages[message]['sender'] === this.props.user.displayName)
                 return (
                     <div className='me-container' key={counter++}>
                         <div className='name me'>{this.state.messages[message]['sender']}</div>
-                        <div onClick={()=> { showTime = !showTime; }} className='me-box'>{this.state.messages[message]['message']}</div>  
+                        <div className='me-box'>{this.state.messages[message]['message']}</div>  
                     </div>
                 );
             else
                 return (
                     <div className='sender-container' key={counter++}>
                         <div className='name sender'>{this.state.messages[message]['sender']}</div>
-                        <div onClick={()=> { showTime = !showTime; }} className='sender-box'>{this.state.messages[message]['message']}</div>
+                        <div className='sender-box'>{this.state.messages[message]['message']}</div>
                     </div>
                 );
         });
