@@ -35,18 +35,18 @@
     color: darken($white-color, 5%);
 }
 
-.sender-box {
+.me-box {
     background-color: lighten($secondary-color, 8%);
 }
 
-.me-box {
+.sender-box {
     background-color: lighten($secondary-color, 4%);
 }
 
-.sender-container {
+.me-container {
     text-align: left;
 }
-.me-container {
+.sender-container {
     text-align: right;
 }
 
@@ -55,13 +55,13 @@
     font-size: 0.8em;
 }
 
-.me {
+.sender {
     margin: 0.3em 0.5em;
     text-align: right;
     color: $primary-color;
 }
 
-.sender {
+.me {
     margin: 0.3em 0.8em;
     text-align: left;
     color: darken($secondary-color, 10%);

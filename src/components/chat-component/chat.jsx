@@ -11,7 +11,7 @@ class Chat extends Component {
     constructor() {
         super();
         this.state = {
-            msg: '',
+            message: '',
             messages: {},
         };
 
@@ -46,37 +46,37 @@ class Chat extends Component {
         this.messagesEnd.current.scrollIntoView({ behavior: 'smooth' })
     }
 
-    handleMsgChange = e => this.setState({ msg: e.target.value });
+    handleMsgChange = e => this.setState({ message: e.target.value });
 
     handleKeyDown = e => {
         if (e.key === 'Enter') {
-            // send the msg
             this.chatRoom.push({
                 sender: this.props.user.displayName,
-                msg: this.state.msg,
+                message: this.state.message,
+                time: new Date().toISOString()
             });
-            // clear the field
-            this.setState({ msg: '' });
+            this.setState({ message: '' });
         }
     }
 
     render() {
         let counter = 0;
         const messages = Object.keys(this.state.messages).map(message => {
-            // Check if the msg is from the user
-
-            if (this.state.messages[message]['sender'] === this.props.user.displayName)
+            const time = new Date(this.state.messages[message]['time']);
+            console.log(time);
+            let showTime = false;
+            if (this.state.messages[message]['me'] === this.props.user.displayName)
                 return (
                     <div className='me-container' key={counter++}>
                         <div className='name me'>{this.state.messages[message]['sender']}</div>
-                        <div className='me-box'>{this.state.messages[message]['msg']}</div>
+                        <div onClick={()=> { showTime = !showTime; }} className='me-box'>{this.state.messages[message]['message']}</div>  
                     </div>
                 );
             else
                 return (
                     <div className='sender-container' key={counter++}>
                         <div className='name sender'>{this.state.messages[message]['sender']}</div>
-                        <div className='sender-box'>{this.state.messages[message]['msg']}</div>
+                        <div onClick={()=> { showTime = !showTime; }} className='sender-box'>{this.state.messages[message]['message']}</div>
                     </div>
                 );
         });
@@ -89,7 +89,7 @@ class Chat extends Component {
                     {messages}
                     <div ref={this.messagesEnd} />
                 </div>
-                <input className='input' onChange={this.handleMsgChange} onKeyDown={this.handleKeyDown} value={this.state.msg} placeholder='Skriv här...'></input>
+                <input className='input' onChange={this.handleMsgChange} onKeyDown={this.handleKeyDown} value={this.state.message} placeholder='Skriv här...'></input>
             </div>
         );
     }
