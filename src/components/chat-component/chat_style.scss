@@ -1,0 +1,28 @@
+@import "../../partials/basics";
+
+.texty {
+    background: lighten($secondary-color, 13%); 
+    color: white;
+    width: 89%;
+    height: 300px;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-width: 8px;
+    border-color: lighten($secondary-color, 13%);
+    resize: none;
+    font-style: italic;
+    
+}
+
+.inputy {
+    width: 89%;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border: solid;
+    border-width: 8px;
+    border-color: white;
+    margin-bottom: 10%;
+    margin-top: -2.5%;
+    font-style: italic;
+    outline-width: 0;
+}
