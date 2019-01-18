@@ -10,7 +10,7 @@ import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
 import FeaturedComponent from './components/featuredComponent/featured.component';
-import gameLibrary from './components/gamelibraryComponent/gamelibrary.component';
+
 
 class App extends Component {
 
@@ -30,7 +30,6 @@ class App extends Component {
             <div className="col-7">
               <FeaturedComponent />
               <GamesContainerComponent text="Games overview" />
-              <gameLibrary/>
             </div>
             <div className="col">
             <SidebarComponent>

@@ -1,18 +1,18 @@
 [
     {
       "src1": "./assets/spel.png",
-      "game": "Game 1",
+      "game": "Kungens Alla Hattar",
       "altText": "Text 1"
     },
     {
       "src1": "./assets/spel.png",
       "src2": "./assets/spel.png",
-      "game": "Game 2",
+      "game": "Kungens Alla Hattar",
       "altText": "Text 2"
     },
     {
       "src1": "./assets/spel.png",
-      "game": "Game 3",
+      "game": "Kungens Alla Hattar",
       "altText": "Text 3"
     }
   ]

@@ -1,5 +1,6 @@
 import React from 'react';
 import './gamesContainer.scss';
+import GameLibrary from '../gamelibraryComponent/gamelibrary.component';
 
 
 const center = {
@@ -10,6 +11,7 @@ const center = {
 const GamesContainerComponent = (props) => {
     return (
         <div className="games-container">
+        <GameLibrary/>
         </div>
     );
 }
