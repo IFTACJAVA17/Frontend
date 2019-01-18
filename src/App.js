@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
-import MockComponent from './components/mockComponent/mockComponent';
+//import MockComponent from './components/mockComponent/mockComponent';
 import GameLayoutComponent from './components/gamelayoutComponent/gameLayout.component';
 import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
@@ -13,6 +13,7 @@ import FeaturedComponent from './components/featuredComponent/featured.component
 import { connect } from 'react-redux';
 import { fetchUser } from './redux/actions';
 import gameLibraryComponent from './components/gamelibraryComponent/gamelibrary.component';
+import Chat from './components/chat-component/chat';
 
 class App extends Component {
 
@@ -40,7 +41,7 @@ class App extends Component {
             <div className="col">
             <SidebarComponent>
             <FriendList header="Friendzzz"/>
-            <MockComponent header="Messages" />
+            <Chat header="Messagezzz" />
           </SidebarComponent>
             </div>
           </div>
