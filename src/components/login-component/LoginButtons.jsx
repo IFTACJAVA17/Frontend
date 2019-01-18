@@ -5,17 +5,10 @@ import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux';
 import { signIn } from '../../redux/actions/index';
 import { googleAuthProvider, facebookAuthProvider } from '../../config/firebase';
-import * as actions from '../../redux/actions/index';
 
 library.add(faIgloo)
 
 class SigninButtons extends React.Component {
-
-    componentWillUpdate(nextProps) {
-        if (nextProps.user) {
-          console.log(nextProps);
-        }
-      }
     
     render (){
        return <div>

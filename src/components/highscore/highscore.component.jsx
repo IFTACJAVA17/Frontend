@@ -20,10 +20,6 @@ export default class Highscore extends Component {
         this.onExited = this.onExited.bind(this);
     }
 
-    componentDidMount() {
-        console.log(this.state.rankings);
-    }
-
     onExiting() {
         this.animating = true;
     }
