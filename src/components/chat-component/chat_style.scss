@@ -5,20 +5,20 @@
     color: white;
     width: 89%;
     height: 490px;
-    border-top-right-radius: 14px;
-    border-top-left-radius: 14px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     border-width: 8px;
     border-color: lighten($secondary-color, 13%);
     resize: none;
-    margin: 1em auto 0.5em auto;
-    padding-top: 0.5em;
+    margin: 0.7em auto 0.5em auto;
+    padding-top: 0.2em;
     overflow-y: auto;
 }
 
 .input {
     width: 89%;
-    border-bottom-right-radius: 14px;
-    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: solid;
     border-width: 0.4em;
     background-color: $white-color;
