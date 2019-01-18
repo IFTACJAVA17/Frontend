@@ -5,12 +5,14 @@ import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
 import MockComponent from './components/mockComponent/mockComponent';
+import GameLayoutComponent from './components/gamelayoutComponent/gameLayout.component';
 import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
 import FeaturedComponent from './components/featuredComponent/featured.component';
 import { connect } from 'react-redux';
 import { fetchUser } from './redux/actions';
+import gameLibraryComponent from './components/gamelibraryComponent/gamelibrary.component';
 
 class App extends Component {
 
@@ -33,6 +35,7 @@ class App extends Component {
             <div className="col-7">
               <FeaturedComponent />
               <GamesContainerComponent text="Games overview" />
+              <gameLibraryComponent></gameLibraryComponent>
             </div>
             <div className="col">
             <SidebarComponent>
