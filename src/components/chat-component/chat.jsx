@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { databaseRef } from '../../config/firebase';
 import { connect } from 'react-redux';
 import * as actions from '../../redux/actions/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './chat_style.scss';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
@@ -53,7 +54,8 @@ class Chat extends Component {
             this.chatRoom.push({
                 sender: this.props.user.displayName,
                 message: this.state.message,
-                time: new Date().toISOString()
+                time: new Date().toISOString(),
+                avatar: this.props.user.photoURL
             });
             this.setState({ message: '' });
         }
@@ -61,19 +63,36 @@ class Chat extends Component {
 
     render() {
         let counter = 0;
+        console.log(this.props.user.photoURL);
         const messages = Object.keys(this.state.messages).map(message => {
             if (this.state.messages[message]['sender'] === this.props.user.displayName)
                 return (
                     <div className='me-container' key={counter++}>
                         <div className='name me'>{this.state.messages[message]['sender']}</div>
-                        <div className='me-box'>{this.state.messages[message]['message']}</div>  
+                        <div className='me-avatar-container'>
+                        <div className='message me-message'>{this.state.messages[message]['message']}</div>
+                        {
+                            this.state.messages[message]['avatar'] !== 'guest' ?
+                                <img className='chat-avatar' src={this.state.messages[message]['avatar']} alt='' height='25px' width='25px' />
+                                :
+                                <FontAwesomeIcon className='guest-avatar'  icon='user' />
+                        }
+                        </div>
                     </div>
                 );
             else
                 return (
                     <div className='sender-container' key={counter++}>
                         <div className='name sender'>{this.state.messages[message]['sender']}</div>
-                        <div className='sender-box'>{this.state.messages[message]['message']}</div>
+                        <div className='sender-avatar-container'>
+                        {
+                            this.state.messages[message]['avatar'] !== 'guest' ?
+                                <img className='chat-avatar' src={this.state.messages[message]['avatar']} alt='' height='25px' width='25px' />
+                                :
+                                <FontAwesomeIcon className='guest-avatar'  icon='user' />
+                        }
+                        <div className='message sender-message'>{this.state.messages[message]['message']}</div>
+                        </div>
                     </div>
                 );
         });

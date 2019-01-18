@@ -26,21 +26,39 @@
     font-size: 0.85em;
 }
 
-.sender-box, .me-box {
-    padding: 0.2em 0.5em 0.3em 0.5em;
-    margin: 0.1em 0.3em 0.3em 0.5em;
+.message {
     border-radius: 12px;
     font-size: 0.9em;
     display:inline-block;
     color: darken($white-color, 5%);
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    text-align: left;
 }
 
-.sender-box {
+.me-avatar-container, .sender-avatar-container{
+    vertical-align: middle;
+    display: flex;
+}
+
+.me-avatar-container {
+    margin: 0.1em 0.3em 0.3em 0.5em;
+    justify-content: flex-end;
+}
+
+.sender-avatar-container {
+    margin: 0.1em 0.3em 0.3em 0.5em;
+    justify-content: flex-start;
+}
+
+.sender-message {
     background-color: lighten($secondary-color, 6%);
+    padding: 0.2em 0.5em 0.3em 0.5em;
 }
 
-.me-box {
+.me-message {
     background-color: lighten($secondary-color, 3%);
+    padding: 0.1em 0.5em 0.3em 0.5em;
 }
 
 .me-container {
@@ -80,4 +98,17 @@
     border-top-right-radius: 14px;
     border-top-left-radius: 14px;
     background-color: lighten($secondary-color, 5%);
+}
+
+.chat-avatar {
+    top: 50%;
+    border-radius: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.guest-avatar {
+    color: lighten($primary-color,20%);
+    margin-top: auto;
+    margin-bottom: auto;
 }

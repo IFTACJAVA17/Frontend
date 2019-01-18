@@ -15,7 +15,7 @@ export const fetchUser = () => dispatch => {
         } else {
             dispatch({
                 type: FETCH_USER,
-                payload: { displayName: 'Guest', uid: 'guestId' }
+                payload: { displayName: 'Guest', uid: 'guestId', photoURL: 'guest' }
             });
         }
     });
