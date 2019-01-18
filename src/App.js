@@ -5,6 +5,7 @@ import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
 import GamesContainerComponent from './components/gamesContainer/gamesContainer';
 import MockComponent from './components/mockComponent/mockComponent';
+import GameLayoutComponent from './components/gamelayoutComponent/gameLayout.component';
 import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
