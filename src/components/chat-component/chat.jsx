@@ -3,6 +3,7 @@ import { databaseRef } from '../../config/firebase';
 import { connect } from 'react-redux';
 import * as actions from '../../redux/actions/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Emoji from 'react-emoji-render';
 import './chat_style.scss';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
@@ -70,7 +71,7 @@ class Chat extends Component {
                     <div className='me-container' key={counter++}>
                         <div className='name me'>{this.state.messages[message]['sender']}</div>
                         <div className='me-avatar-container'>
-                        <div className='message me-message'>{this.state.messages[message]['message']}</div>
+                        <div className='message me-message'><Emoji text={this.state.messages[message]['message']} /></div>
                         {
                             this.state.messages[message]['avatar'] !== 'guest' ?
                                 <img className='chat-avatar' src={this.state.messages[message]['avatar']} alt='' height='25px' width='25px' />
@@ -91,7 +92,7 @@ class Chat extends Component {
                                 :
                                 <FontAwesomeIcon className='guest-avatar'  icon='user' />
                         }
-                        <div className='message sender-message'>{this.state.messages[message]['message']}</div>
+                        <div className='message sender-message'><Emoji text={this.state.messages[message]['message']} /></div>
                         </div>
                     </div>
                 );
