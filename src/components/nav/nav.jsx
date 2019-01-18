@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, NavbarBrand,  NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
+import { Navbar, Nav, NavbarBrand, NavItem, NavLink, Collapse, Form, Button } from 'reactstrap';
 import './nav.scss';
 import Popup from "reactjs-popup";
 import LoginContent from '../login-component/LoginContent';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/actions/index';
 
 class NavComponent extends Component {
 
@@ -21,6 +23,30 @@ class NavComponent extends Component {
         }));
     }
 
+    signMethod() {
+        if (this.props.user == null) {
+            return (
+                <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Sign in</Button>}>
+                    <LoginContent />
+                </Popup>
+            );
+        } else {
+            return (
+                <div className="row1">
+                    <div className="column1">
+                        <img className="profile-picture" src={this.props.user.photoURL} alt="PP" height="40px" width="40px" />
+                    </div>
+                    <div className="column2">
+                        <p>{this.props.user.displayName}</p>
+                    </div>
+                    <div className="column3">
+                        <button className="btn btn-success sign-out-fix" onClick={actions.signOut()}>Sign out</button>
+                    </div>
+                </div>
+            );
+        }
+    }
+
     render() {
         return (
             <div>
@@ -30,10 +56,7 @@ class NavComponent extends Component {
                     </span>
                     <NavbarBrand className="navbar-brand order-0">IGaming</NavbarBrand>
                     <Form inline>
-                    <Popup className="popup-style" modal trigger={<Button className="btn btn-success">Log in</Button>}>
-                    <LoginContent/>
-                    </Popup>
-                        
+                        {this.signMethod()}
                     </Form>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav>
@@ -51,4 +74,8 @@ class NavComponent extends Component {
     }
 }
 
-export default NavComponent;
+const mapStateToProps = ({ user }) => {
+    return { user };
+}
+
+export default connect(mapStateToProps, actions)(NavComponent);

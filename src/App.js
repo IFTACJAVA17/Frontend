@@ -10,12 +10,17 @@ import FriendList from './components/friendlist-component/friendlist';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
 import FeaturedComponent from './components/featuredComponent/featured.component';
+import { connect } from 'react-redux';
+import { fetchUser } from './redux/actions';
 import gameLibraryComponent from './components/gamelibraryComponent/gamelibrary.component';
 
 class App extends Component {
 
+  componentWillMount() {
+    this.props.fetchUser();
+  }
+
   render() {
-    console.log(process.env.REACT_APP_API_KEY)
     return (
       <div className="App">
         <NavComponent />
@@ -45,4 +50,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, { fetchUser })(App);
