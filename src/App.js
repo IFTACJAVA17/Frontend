@@ -11,6 +11,7 @@ import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
 import FeaturedComponent from './components/featuredComponent/featured.component';
 import GameRouter from './components/gamerouter-component/gamerouter.component';
+import StartRouter from './components/gamerouter-component/startrouter.component';
 
 
 class App extends Component {
@@ -29,7 +30,6 @@ class App extends Component {
               </SidebarComponent>
             </div>
             <div className="col-7">
-              <FeaturedComponent />
               <GameRouter/>
             </div>
             <div className="col">

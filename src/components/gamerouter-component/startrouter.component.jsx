@@ -7,15 +7,12 @@ import GameLayout from '../gamelayoutComponent/gameLayout.component';
 import FeaturedComponent from '../featuredComponent/featured.component';
 import StartComponent from './gamerouter.startcomponent';
 
-const GameRouter = () => (
+const StartRouter = () => (
     <Router>
         <div>
-        <Route path='/KungensAllaHattar' component={GameLayout}/>
-        <Route path='/' exact component={StartComponent}/>
+            <Route path='/' component={StartComponent} />
         </div>
     </Router>
-    
-    
 )
 
-export default GameRouter;
+export default StartRouter;
