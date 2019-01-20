@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Gallery from 'react-grid-gallery';
 
 
-export default class gameLibrary extends Component {
+export default class GameLibrary extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -50,7 +50,7 @@ export default class gameLibrary extends Component {
     }
 }
 
-gameLibrary.propTypes = {
+GameLibrary.propTypes = {
     images: PropTypes.arrayOf(
         PropTypes.shape({
             src: PropTypes.string.isRequired,
@@ -90,7 +90,7 @@ const customTagStyle = {
     margin: "1px"
 };
 
-gameLibrary.defaultProps = {
+GameLibrary.defaultProps = {
     images: [
         {
             src: "./assets/spel.png",
@@ -105,7 +105,6 @@ gameLibrary.defaultProps = {
             thumbnail: "https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Folliebarder%2Ffiles%2F2018%2F03%2Fsuper_mario_plumber_new-1200x675.jpg",
             thumbnailWidth: 320,
             thumbnailHeight: 160,
-            tags: [{value: "Adventure"}],
             tags: [{value: "Classic | Adventure", title: "Mario JS"}],
             caption: "This is a clone of Infinite Mario, written in JavaScript for web browsers using HTML5."
         }

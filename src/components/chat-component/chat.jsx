@@ -7,7 +7,6 @@ import Emoji from 'react-emoji-render';
 import './chat_style.scss';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
-
 class Chat extends Component {
     messagesEnd = React.createRef()
     constructor() {
@@ -16,15 +15,11 @@ class Chat extends Component {
             message: '',
             messages: {},
         };
-
     }
-
-
 
     componentWillMount() {
         this.chatRoom = databaseRef.child('chat').child('global');
         this.handleNewMessages = snap => {
-            console.log(snap.val());
             // if not null then update state
             if (snap.val()) this.setState({ messages: snap.val() });
         };
@@ -64,7 +59,6 @@ class Chat extends Component {
 
     render() {
         let counter = 0;
-        console.log(this.props.user.photoURL);
         const messages = Object.keys(this.state.messages).map(message => {
             if (this.state.messages[message]['sender'] === this.props.user.displayName)
                 return (
@@ -98,7 +92,7 @@ class Chat extends Component {
                 );
         });
         return (
-            <div className='chatlist'>
+            <div>
                 <div className='header'>
                     <h5>Chat</h5>
                 </div>

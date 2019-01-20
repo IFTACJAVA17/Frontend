@@ -40,7 +40,7 @@ class NavComponent extends Component {
                         <p>{this.props.user.displayName}</p>
                     </div>
                     <div className="column3">
-                        <button className="btn btn-success sign-out-fix" onClick={actions.signOut()}>Sign out</button>
+                        <button className="btn btn-success sign-out-fix" onClick={actions.signOut(this.props.user)}>Sign out</button>
                     </div>
                 </div>
             );

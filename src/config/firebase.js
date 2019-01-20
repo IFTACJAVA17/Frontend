@@ -15,6 +15,10 @@ firebase.initializeApp(config);
 
 export const databaseRef = firebase.database().ref();
 export const authRef = firebase.auth();
+export const userTracker = firebase.database().ref('chat/online');
+export const usersRef = (uid) => {
+    return firebase.database().ref('users').child(uid);
+}
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 export default firebase;

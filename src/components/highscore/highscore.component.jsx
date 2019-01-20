@@ -49,17 +49,17 @@ export default class Highscore extends Component {
         const { activeIndex, rankings } = this.state;
 
         const slides = rankings.map((ranking) => {
-            const scores = ranking.scores.sort((a,b) => b.score - a.score);
+            const scores = ranking.scores.sort((a, b) => b.score - a.score);
             return (
 
-            <CarouselItem
-                onExiting={this.onExiting}
-                onExited={this.onExited}
-                key={ranking.gameId}
-            >
-                <h5 className="text-primary">{ranking.gameName}</h5>
-                <ScoreList scores={scores} />
-            </CarouselItem>
+                <CarouselItem
+                    onExiting={this.onExiting}
+                    onExited={this.onExited}
+                    key={ranking.gameId}
+                >
+                    <h5 className="text-primary">{ranking.gameName}</h5>
+                    <ScoreList scores={scores} />
+                </CarouselItem>
             );
         });
 

@@ -7,7 +7,6 @@ const SidebarComponent = (props) => {
             {props.children}
         </div>
     );
-
 }
 
 export default SidebarComponent;
