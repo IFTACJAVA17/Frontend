@@ -9,10 +9,8 @@ export default class GameLayout extends Component {
     constructor(props){
         super(props);
         this.state = { 
-            images: ImageData
-            
+            images: ImageData,
         };
-        
     }
     
     render() {

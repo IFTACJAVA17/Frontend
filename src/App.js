@@ -15,7 +15,6 @@ import gameLibraryComponent from './components/gamelibraryComponent/gamelibrary.
 class App extends Component {
 
   render() {
-    console.log(process.env.REACT_APP_API_KEY)
     return (
       <div className="App">
         <NavComponent />
