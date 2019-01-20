@@ -10,6 +10,13 @@ export default class GameLibrary extends Component {
             images: this.props.images
         };
     }
+    handleOnClick = () => {
+        // some action...
+        // then redirect
+        this.setState({redirect: true});
+      }
+
+      
 
     setCustomTags (i) {
         return (
