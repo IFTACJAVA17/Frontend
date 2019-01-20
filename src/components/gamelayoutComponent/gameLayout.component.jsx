@@ -3,6 +3,7 @@ import Images from './exampleimage.component';
 import './gameLayoutContainer.scss';
 import ImageData from './exampleimage-mock.json';
 import ExampleImage from './exampleimage.component';
+import KungaspeletComponent from '../games/Kungaspelet/kungaspeletComponent';
 
 export default class GameLayout extends Component {
     constructor(props){
@@ -23,8 +24,7 @@ export default class GameLayout extends Component {
         
         return (
             <div className='gamelayout-container'>
-             
-            <ExampleImage image={images[0]} />
+                <KungaspeletComponent />
             </div>
         )
         }

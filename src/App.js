@@ -28,9 +28,7 @@ class App extends Component {
               </SidebarComponent>
             </div>
             <div className="col-7">
-              <FeaturedComponent />
-              <GamesContainerComponent text="Games overview" />
-              <gameLibraryComponent></gameLibraryComponent>
+              <GameLayoutComponent />
             </div>
             <div className="col">
             <SidebarComponent>
