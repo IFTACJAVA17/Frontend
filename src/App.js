@@ -13,9 +13,9 @@ import { connect } from 'react-redux';
 import { fetchUser } from './redux/actions';
 import Chat from './components/chat-component/chat';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faUserPlus, faUserMinus, faCircle } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUser)
+library.add(faUser, faUserPlus, faUserMinus, faCircle);
 
 class App extends Component {
 

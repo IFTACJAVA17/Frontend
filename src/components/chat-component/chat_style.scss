@@ -4,7 +4,7 @@
     background: lighten($secondary-color, 9%); 
     color: white;
     width: 89%;
-    height: 21.2em;
+    height: 29.8em;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-width: 8px;
@@ -90,13 +90,12 @@
 }
 
 .chat-area::-webkit-scrollbar-track {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     border-radius: 10px;
 }
 
 .chat-area::-webkit-scrollbar-thumb {
-    border-top-right-radius: 14px;
-    border-top-left-radius: 14px;
+    border-radius: 14px;
     background-color: lighten($secondary-color, 5%);
 }
 

@@ -19,6 +19,7 @@ export const userTracker = firebase.database().ref('chat/online');
 export const usersRef = (uid) => {
     return firebase.database().ref('users').child(uid);
 }
+export const allUsersRef = firebase.database().ref('users');
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 export default firebase;

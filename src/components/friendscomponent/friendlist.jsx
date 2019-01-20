@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { usersRef, userTracker } from '../../config/firebase'
+import Friend from './Friend';
+import SearchInput, { createFilter } from 'react-search-input';
+
 import './friendlist_style.scss';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import Friend from './Friend';
+
+const KEYS_TO_FILTER = ['name'];
 
 export default class FriendList extends Component {
     constructor(props) {
@@ -10,8 +14,10 @@ export default class FriendList extends Component {
         this.state = {
             user: props.user,
             friends: [],
-            online: {}
+            online: {},
+            searchTerm: ''
         }
+        this.searchUpdate = this.searchUpdate.bind(this);
     }
 
     componentDidMount() {
@@ -22,7 +28,26 @@ export default class FriendList extends Component {
         userTracker.off('value', this.handleOnlineUsers);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({ user: nextProps.user }, () => {
+            this.fetchFriends();
+        });
+    }
+
     componentWillMount() {
+        this.fetchFriends();
+        this.handleOnlineUsers = this.handleOnlineUsers.bind(this);
+    }
+
+    searchUpdate = (term) => {
+        this.setState({ searchTerm: term })
+    }
+
+    handleOnlineUsers = (snap) => {
+        if (snap.val()) this.setState({ online: snap.val() });
+    }
+
+    fetchFriends = () => {
         if (this.state.user.uid !== 'guestId') {
             usersRef(this.state.user.uid).on('value', snap => {
                 let friends = snap.val().friends;
@@ -32,31 +57,33 @@ export default class FriendList extends Component {
                 this.setState({ friends });
             });
         }
-        this.handleOnlineUsers = snap => {
-            if (snap.val()) this.setState({ online: snap.val() });
-        }
     }
 
-    trackFriend(uid) {
+    trackFriend = (uid) => {
         return Object.keys(this.state.online).includes(uid);
     }
 
-
     render() {
-        const friends = this.state.friends.map(friend => {
-            return <Friend name={friend.name} key={friend.id} online={this.trackFriend(friend.id)} />
-        });
-
-        if (this.props.user.uid !== 'guestId') {
+        const searchTerm = this.state.searchTerm;
+        if (this.state.user.uid !== 'guestId') {
+            const friends = this.state.friends.filter(createFilter(searchTerm, KEYS_TO_FILTER)).map(friend => {
+                return <Friend
+                    key={friend.id}
+                    name={friend.name}
+                    status={this.trackFriend(friend.id)}
+                    id={friend.id}
+                />
+            });
             return (
-                <div>
-                    Friends
-                      <div>{friends}</div>
+                <div className='friendlist-div'>
+                    <SearchInput inputClassName='form-control search-input' onChange={this.searchUpdate} />
+                    {friends}
                 </div>
             )
+        } else {
+            return (
+                <div>Guests cant have friends</div>
+            )
         }
-        return (
-            <div>Guests cant have friends</div>
-        )
     }
 }

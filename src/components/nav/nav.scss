@@ -69,40 +69,26 @@
     background-color: black !important;
 }
 
-.row1 {
+.user-info-and-signin {
     display:flex;
-    flex-direction:row;
-    justify-content: space-around;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
 }
 
-.column1 {
-    display:flex;
-    flex-direction:column;
-    margin-right: 5%;
-    margin-top: 2.5%;
-}
-
-.column2 {
-    display:flex;
-    flex-direction:column;
-    margin-right: 5%;
-    width: 100%;
+.user-name-column {
+    margin-left: 1em;
     color: $primary-color;
+    padding-top: 1em;
     font-weight: bold;
-
 }
 
-.column3 {
-    display:flex;
-    flex-direction:column;
-    margin-right: 5%;
+.button-column {
+    text-align: right;
+    width: 16vw;
 }
 
 .profile-picture {
     border-radius: 50%;
     border: 2px $primary-color solid;
-}
-
-.sign-out-fix {
-    height: 3.3rem !important;
 }

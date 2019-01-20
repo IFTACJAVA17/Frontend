@@ -30,10 +30,10 @@ export const signIn = (provider) => dispatch => {
         .then(res => { 
             const user = res.user;
             usersRef(user.uid).update({
-                // For now the users name and email is persisted in the firebase database     
                 // Here we can add more data from the user object if we wish to.
                 username: user.displayName,
-                email: user.email
+                email: user.email,
+                avatar: user.photoURL
             });
             userTracker.child(user.uid).set({ user: user.displayName });
 
@@ -44,9 +44,9 @@ export const signIn = (provider) => dispatch => {
 }
 
 export const signOut = (user) => dispatch => {
+    userTracker.child(user.uid).remove();
     authRef.signOut()
         .then(()=> {
-            userTracker.child(user.uid).remove();
             console.log('user signed out')
         })
         .catch(err => {

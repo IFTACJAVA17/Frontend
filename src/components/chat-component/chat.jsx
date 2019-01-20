@@ -84,7 +84,7 @@ class Chat extends Component {
                             this.state.messages[message]['avatar'] !== 'guest' ?
                                 <img className='chat-avatar' src={this.state.messages[message]['avatar']} alt='' height='25px' width='25px' />
                                 :
-                                <FontAwesomeIcon className='guest-avatar'  icon='user' />
+                                <FontAwesomeIcon className='guest-avatar' icon='user' />
                         }
                         <div className='message sender-message'><Emoji text={this.state.messages[message]['message']} /></div>
                         </div>
@@ -100,7 +100,7 @@ class Chat extends Component {
                     {messages}
                     <div ref={this.messagesEnd} />
                 </div>
-                <input className='input' onChange={this.handleMsgChange} onKeyDown={this.handleKeyDown} value={this.state.message} placeholder='Skriv här...'></input>
+                <input className='input' onChange={this.handleMsgChange} onKeyDown={this.handleKeyDown} value={this.state.message} placeholder='Say something..'></input>
             </div>
         );
     }
