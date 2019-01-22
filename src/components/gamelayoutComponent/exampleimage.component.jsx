@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 export default class ExampleImage extends Component {
-	constructor(props) {
-		super(props);
-	}
-	
+
    render() {
        const { image } = this.props;
 		console.log(image)

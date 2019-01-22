@@ -8,10 +8,16 @@ const center = {
     lineHeight: '25rem'
 }
 
+import GameLibraryShow from '../gamelibraryComponent/gamelibrary.component';
+
 const GamesContainerComponent = (props) => {
     return (
         <div className="games-container">
+
         <GameLibrary/>
+
+            <GameLibraryShow />
+
         </div>
     );
 }
