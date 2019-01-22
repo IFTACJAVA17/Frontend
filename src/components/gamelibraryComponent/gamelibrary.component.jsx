@@ -1,5 +1,26 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Container, Row, Col} from 'reactstrap';
+import { Link } from 'react-router-dom';
+
+
+export default class GameLibrary extends Component {
+    
+    render(){
+        return(
+            <Container>
+                <Row>
+                    <Col><Link to='/KungensAllaHattar'><img src='./assets/spel.png' width= "100%"></img></Link></Col>
+                    <Col></Col>
+                    <Col></Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col></Col>
+                    <Col></Col>
+                </Row>
+            </Container>
+        )
+
 import Gallery from 'react-grid-gallery';
 
 
@@ -9,46 +30,12 @@ export default class GameLibrary extends Component {
         this.state = {
             images: this.props.images
         };
+
     }
 
-    setCustomTags (i) {
-        return (
-            i.tags.map((t) => {
-                return (<div
-                        key={t.value}
-                        style={customTagStyle}>
-                        {t.title}
-                        </div>);
-            })
-        );
-    }
 
-    render () {
-        var images =
-                this.state.images.map((i) => {
-                    i.customOverlay = (
-                            <div style={captionStyle}>
-                            <div>{i.caption}</div>
-                            {i.hasOwnProperty('tags') &&
-                             this.setCustomTags(i)}
-                        </div>);
-                    return i;
-                });
-
-
-        return (
-                <div style={{
-                    display: "block",
-                    minHeight: "160px",
-                    width: "100%",
-                    overflow: "auto"}}>
-                <Gallery
-            images={images}
-            enableImageSelection={false}/>
-                </div>
-        );
-    }
 }
+
 
 GameLibrary.propTypes = {
     images: PropTypes.arrayOf(
@@ -110,3 +97,4 @@ GameLibrary.defaultProps = {
         }
     ]
 };
+

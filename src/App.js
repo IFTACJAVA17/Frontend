@@ -9,6 +9,9 @@ import FriendsComponent from './components/friendscomponent/friendscomponent';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
 import FeaturedComponent from './components/featuredComponent/featured.component';
+import GameRouter from './components/gamerouter-component/gamerouter.component';
+import StartRouter from './components/gamerouter-component/startrouter.component';
+
 import { connect } from 'react-redux';
 import { fetchUser } from './redux/actions';
 import Chat from './components/chat-component/chat';
@@ -16,6 +19,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser, faUserPlus, faUserMinus, faCircle } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUser, faUserPlus, faUserMinus, faCircle);
+
 
 class App extends Component {
 
@@ -36,6 +40,7 @@ class App extends Component {
               </SidebarComponent>
             </div>
             <div className="col-7">
+              <GameRouter/>
               <FeaturedComponent />
               <GamesContainerComponent text="Games overview" />
             </div>
