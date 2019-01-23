@@ -16,7 +16,13 @@ class KungaspeletComponent extends Component {
 
     componentDidMount() {
         window.addEventListener('message', this.addScoreToState);
-        highscoreRef.child('kungensallahattar').on('value', (snap) => this.fetchHighscore(snap));
+        highscoreRef.child('kungensallahattar').on('value', (snap) => {
+            this.fetchHighscore(snap);
+        });
+        // Use this method to test the addScoreToDatabaseMetod.
+        /*setTimeout(() => {
+            this.addScoreToDatabase({score: 32, userName: 'Emil Sundvall', userId: "tJ3KWf9pBsYLnFLSpJuI2MfdD452"})
+        },5000); */
     }
 
     componentWillMount(){
@@ -29,7 +35,30 @@ class KungaspeletComponent extends Component {
         }
         this.addScoreToDatabase = (scoreObj) => {
             const scores = this.state.scores;
-            scores.push(scoreObj);
+            if(scores.length === 0) {
+                scores.push(scoreObj);
+            } else {
+                for (let score of scores) {
+                    if(score.userId === 'guestId') {
+                        scores.push(scoreObj);
+                        break;
+                    } else if (scores.some(score => score.userId === scoreObj.userId)) {
+                        //console.log('this should change a score')
+                        if(score.userId === scoreObj.userId) {
+                            if(score.score < scoreObj.score){
+                                //console.log('new bigger')
+                                score.score = scoreObj.score;
+                            }
+                            break;
+                        }
+                    } else {
+                        //console.log('this should add a score')
+                        scores.push(scoreObj);
+                        break;
+                    }
+                    
+                }
+            }
             highscoreRef.child('kungensallahattar').set(scores);
         }
     }
