@@ -40,7 +40,6 @@ class KungaspeletComponent extends Component {
             } else {
                 for (let score of scores) {
                     if(score.userId === 'guestId') {
-                        scores.push(scoreObj);
                         break;
                     } else if (scores.some(score => score.userId === scoreObj.userId)) {
                         //console.log('this should change a score')
