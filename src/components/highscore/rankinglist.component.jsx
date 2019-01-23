@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-
+import rand from 'random-key';
 import './rankinglistComponent.scss';
 
 
@@ -16,8 +16,12 @@ export default class ScoreList extends Component {
     render(){
         let rank = 0;
         const scores = this.state.scores.map(score => {
+            let userId = score.userId;
+            if(userId === 'guestId') {
+                userId = rand.generate(5);
+            }
             return (
-                <Row key={score.userId}>
+                <Row key={userId}>
                     <Col>
                     <p>{rank = rank + 1}</p>
                     </Col>

@@ -22,7 +22,7 @@ class KungaspeletComponent extends Component {
     componentWillMount(){
         let scores = [];
         this.fetchHighscore = (snap) => {
-            if(snap.val() !== undefined) {
+            if(snap.val() !== undefined && snap.val() !== null) {
                 scores = snap.val(); 
                 this.setState({scores});
             }
@@ -48,7 +48,7 @@ class KungaspeletComponent extends Component {
                 score: e.data,
             }, () => {
                 if(e.data > 0) {
-                    const scoreObj = { score: e.data, user: this.props.user.displayName}
+                    const scoreObj = { score: e.data, userName: this.props.user.displayName, userId: this.props.user.uid}
                     this.addScoreToDatabase(scoreObj)
                 } else {
                     console.log('you lost');

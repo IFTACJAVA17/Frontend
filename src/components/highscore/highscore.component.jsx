@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { CarouselItem, Carousel, CarouselControl } from 'reactstrap';
-
+import { highscoreRef } from '../../config/firebase'
 import HighscoreData from './highscore-mock.json';
 import ScoreList from './rankinglist.component.jsx';
 import './highscoreComponent.scss';
+import rand from 'random-key';
 
 export default class Highscore extends Component {
 
@@ -18,6 +19,39 @@ export default class Highscore extends Component {
         this.goToIndex = this.goToIndex.bind(this);
         this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
+    }
+
+    componentDidMount(){
+        highscoreRef.on('value', (snap) => this.fetchHighscore(snap));
+    }
+
+    componentWillMount(){
+        this.fetchHighscore = (snap) => {
+            /*
+                HEADS UP! This is taking the mockdata and the firebase db-data and concats them.
+                If thing were diffrent with more games live no concatenation would be done and gamesFromDb 
+                would be set to the state.
+             */
+            if(snap.val() !== undefined && snap.val() !== null) {
+                const staterankings = this.state.rankings;
+                const games = snap.val();
+                const gamesFromDb = Object.keys(snap.val()).map(gameName => {
+                    const gameScore = games[gameName];
+                    const gameObj = {
+                        gameId: parseInt(rand.generateDigits(3)),
+                        gameName: gameName,
+                        scores: gameScore
+                    }
+                    return gameObj;
+                });
+                const rankings = staterankings.concat(gamesFromDb); //right here is the weirdness. 
+                this.setState({rankings});
+            }
+        }
+    }
+
+    componentWillUnmount(){
+        highscoreRef.off('value', (snap) => this.fetchHighscore(snap));
     }
 
     onExiting() {
