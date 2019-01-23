@@ -21,7 +21,7 @@ export default class ScoreList extends Component {
                 userId = rand.generate(5);
             }
             return (
-                <Row key={userId}>
+                <Row key={rand.generate(10)}>
                     <Col>
                     <p>{rank = rank + 1}</p>
                     </Col>

@@ -83,7 +83,8 @@ export default class Highscore extends Component {
         const { activeIndex, rankings } = this.state;
 
         const slides = rankings.map((ranking) => {
-            const scores = ranking.scores.sort((a, b) => b.score - a.score);
+            const sortedScores = ranking.scores.sort((a, b) => b.score - a.score);
+            const scores = sortedScores.slice(0, 10); //slice array to only display 10 highest scores.
             return (
 
                 <CarouselItem
