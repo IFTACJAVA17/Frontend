@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Images from './exampleimage.component';
 import './gameLayoutContainer.scss';
 import ImageData from './exampleimage-mock.json';
 import ExampleImage from './exampleimage.component';
@@ -9,15 +8,11 @@ export default class GameLayout extends Component {
     constructor(props){
         super(props);
         this.state = { 
-            images: ImageData,
+            images: ImageData
         };
     }
     
     render() {
-        const center = {
-            textAlign: 'center',
-            lineHeight: '25rem'
-        }
         const { images } = this.state;
         
         return (

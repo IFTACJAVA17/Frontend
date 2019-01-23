@@ -69,3 +69,26 @@
     background-color: black !important;
 }
 
+.user-info-and-signin {
+    display:flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-name-column {
+    margin-left: 1em;
+    color: $primary-color;
+    padding-top: 1em;
+    font-weight: bold;
+}
+
+.button-column {
+    text-align: right;
+    width: 16vw;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    border: 2px $primary-color solid;
+}

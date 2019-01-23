@@ -2,7 +2,7 @@
 
 .friendlistContainer {
     height: 24em;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .header {
@@ -18,8 +18,27 @@
     }
 }
 
+.find {
+    color: $primary-color;
+    font-weight: bold;
+}
+
 .friendlist-div {
     display: inline;
+
+}
+
+.friendlistContainer::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.friendlistContainer::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.friendlistContainer::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background-color: darken($secondary-color, 5%);
 }
 
 .friendlist-title {
@@ -29,8 +48,6 @@
 .friendlist-list {
     background-color: $secondary-color;
     width: 100%;
-
-
 }
 
 .friendlist-span {
@@ -41,20 +58,23 @@
 .friendlist-offline {
     color: $white-color;
     float:left;
-    margin-right: 1em;
-    margin-left: 1em;
-    margin-top: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 .friendlist-online {
     color: $primary-color;
     float:left;
-    margin-right: 1em;
-    margin-left: 1em;
-    margin-top: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
 }
 
-.friendlist-user:hover {
+.friendlist-element {
+    padding: 0.5em;
+}
+
+.friendlist-element:hover {
     background-color: lighten($secondary-color, 10%);
     cursor: pointer;
 }
@@ -81,8 +101,6 @@ h3 {
     border-radius: 15px;
     border-color: black !important;
     width: 100%;
- 
-    
 }
 
 .friend-list-text {
@@ -92,10 +110,58 @@ h3 {
     font-weight: bold;
 }
 
-.friend-table {
+.friend-container {
     width: 100%;
 }
 
 .friend-card {
+    margin: 0.5em;
     background-color: $accent-light-color;
+}
+
+.unfriend {
+    color: $accent-color;
+    font-size: 1.5em;
+}
+
+.befriend {
+    color: $accent-dark-color;
+    font-size: 1.5em;
+}
+
+.no-avatar {
+    color: $accent-light-color;
+    font-size: 1.5em;
+}
+
+.users-modal {
+    background-color: $secondary-color;
+}
+.center {
+    text-align: center;
+}
+
+.online {
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 0.7em;
+    color: green;
+}
+
+.offline {
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 0.7em;
+    color: darkred;
+}
+
+.search-input {
+    width: 92%;
+    padding: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white-color;
+    border-color: $white-color;
 }

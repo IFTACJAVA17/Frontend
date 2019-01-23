@@ -3,16 +3,26 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavComponent from './components/nav/nav';
 import SidebarComponent from './components/sidebar/sidebar';
-import GamesContainerComponent from './components/gamesContainer/gamesContainer';
-import MockComponent from './components/mockComponent/mockComponent';
-import GameLayoutComponent from './components/gamelayoutComponent/gameLayout.component';
-import FriendList from './components/friendlist-component/friendlist';
+//import MockComponent from './components/mockComponent/mockComponent';
+import FriendsComponent from './components/friendscomponent/friendscomponent';
 import Highscore from './components/highscore/highscore.component';
 import TournamentList from './components/tournament-list-component/tournament-list';
-import FeaturedComponent from './components/featuredComponent/featured.component';
-import gameLibraryComponent from './components/gamelibraryComponent/gamelibrary.component';
+import GameRouter from './components/gamerouter-component/gamerouter.component';
+
+import { connect } from 'react-redux';
+import { fetchUser } from './redux/actions';
+import Chat from './components/chat-component/chat';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUser, faUserPlus, faUserMinus, faCircle } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faUser, faUserPlus, faUserMinus, faCircle);
+
 
 class App extends Component {
+
+  componentWillMount() {
+    this.props.fetchUser();
+  }
 
   render() {
     return (
@@ -27,13 +37,13 @@ class App extends Component {
               </SidebarComponent>
             </div>
             <div className="col-7">
-              <GameLayoutComponent />
+              <GameRouter/>
             </div>
             <div className="col">
-            <SidebarComponent>
-            <FriendList header="Friendzzz"/>
-            <MockComponent header="Messages" />
-          </SidebarComponent>
+              <SidebarComponent>
+                <FriendsComponent />
+                <Chat />
+              </SidebarComponent>
             </div>
           </div>
         </div>
@@ -42,4 +52,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, { fetchUser })(App);

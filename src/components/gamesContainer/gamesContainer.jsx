@@ -1,17 +1,16 @@
 import React from 'react';
 import './gamesContainer.scss';
-import gameLibraryShow from '../gamelibraryComponent/gamelibrary.component';
-
-
-const center = {
-    textAlign: 'center',
-    lineHeight: '25rem'
-}
+import GameLibrary from '../gamelibraryComponent/gamelibrary.component';
+import GameLibraryShow from '../gamelibraryComponent/gamelibrary.component';
 
 const GamesContainerComponent = (props) => {
     return (
         <div className="games-container">
-            <gameLibraryShow></gameLibraryShow>
+
+        <GameLibrary/>
+
+            <GameLibraryShow />
+
         </div>
     );
 }
