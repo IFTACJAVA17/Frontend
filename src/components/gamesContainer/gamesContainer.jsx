@@ -9,8 +9,6 @@ const GamesContainerComponent = (props) => {
 
         <GameLibrary/>
 
-            <GameLibraryShow />
-
         </div>
     );
 }
