@@ -1,0 +1,167 @@
+@import "../../partials/basics";
+
+.friendlistContainer {
+    height: 24em;
+    overflow: auto;
+}
+
+.header {
+    background-color: lighten($secondary-color, 13%);
+    border-radius: $bl/2 $bl/2 0 0;
+    padding: 10px;
+
+    & h5 {
+        margin-top: .25em;
+        margin-bottom: 0;
+        color: $primary-color;
+        line-height: 1.5em;
+    }
+}
+
+.find {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.friendlist-div {
+    display: inline;
+
+}
+
+.friendlistContainer::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.friendlistContainer::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.friendlistContainer::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background-color: darken($secondary-color, 5%);
+}
+
+.friendlist-title {
+    background-color: lighten($secondary-color, 20%);
+}
+
+.friendlist-list {
+    background-color: $secondary-color;
+    width: 100%;
+}
+
+.friendlist-span {
+    float: right !important;
+    font-style: italic;
+}
+
+.friendlist-offline {
+    color: $white-color;
+    float:left;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.friendlist-online {
+    color: $primary-color;
+    float:left;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
+}
+
+.friendlist-element {
+    padding: 0.5em;
+}
+
+.friendlist-element:hover {
+    background-color: lighten($secondary-color, 10%);
+    cursor: pointer;
+}
+
+.add-friend-button {
+    float:right;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "Sintony";
+    font-weight: bold;
+}
+
+h3 {
+    color: $primary-color;
+    padding-bottom: 0;
+    line-height: 0;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}
+
+.popup-style {
+    background-color: lighten($secondary-color, 10%) !important;
+    border-radius: 15px;
+    border-color: black !important;
+    width: 100%;
+}
+
+.friend-list-text {
+    color: $primary-color !important;
+    font-size: 16px;
+    font-family: "Sintony";
+    font-weight: bold;
+}
+
+.friend-container {
+    width: 100%;
+}
+
+.friend-card {
+    margin: 0.5em;
+    background-color: $accent-light-color;
+}
+
+.unfriend {
+    color: $accent-color;
+    font-size: 1.5em;
+}
+
+.befriend {
+    color: $accent-dark-color;
+    font-size: 1.5em;
+}
+
+.no-avatar {
+    color: $accent-light-color;
+    font-size: 1.5em;
+}
+
+.users-modal {
+    background-color: $secondary-color;
+}
+.center {
+    text-align: center;
+}
+
+.online {
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 0.7em;
+    color: green;
+}
+
+.offline {
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 0.7em;
+    color: darkred;
+}
+
+.search-input {
+    width: 92%;
+    padding: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white-color;
+    border-color: $white-color;
+}

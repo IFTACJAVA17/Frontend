@@ -1,0 +1,60 @@
+[
+    {
+        "gameId": 1,
+        "gameName": "Hextris",
+        "scores": [
+            {
+                "score": 234,
+                "userName": "kallekula2008",
+                "userId": 1
+            },
+            {
+                "score": 134,
+                "userName": "Mr_Arne",
+                "userId": 2
+            }
+        ]
+    },
+    {
+        "gameId": 2,
+        "gameName": "Clumsy Bird",
+        "scores": [
+            {
+                "score": 34,
+                "userName": "kallekula2008",
+                "userId": 1
+            },
+            {
+                "score": 42,
+                "userName": "Mr_Arne",
+                "userId": 2
+            },
+            {
+                "score": 23,
+                "userName": "sndvll",
+                "userId": 3
+            }
+        ]
+    },
+    {
+        "gameId": 3,
+        "gameName": "Untrusted",
+        "scores": [
+            {
+                "score": 5,
+                "userName": "kallekula2008",
+                "userId": 1
+            },
+            {
+                "score": 10,
+                "userName": "Mr_Arne",
+                "userId": 2
+            },
+            {
+                "score": 3,
+                "userName": "sndvll",
+                "userId": 3
+            }
+        ]
+    }
+]

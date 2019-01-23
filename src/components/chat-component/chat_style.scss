@@ -1,0 +1,113 @@
+@import "../../partials/basics";
+
+.chat-area {
+    background: lighten($secondary-color, 9%); 
+    color: white;
+    width: 89%;
+    height: 29.8em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-width: 8px;
+    border-color: lighten($secondary-color, 9%);
+    resize: none;
+    margin: 0.7em auto 0.5em auto;
+    padding-top: 0.2em;
+    overflow-y: auto;
+}
+
+.input {
+    width: 89%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid;
+    border-width: 0.4em;
+    background-color: $white-color;
+    border-color: $white-color;
+    font-size: 0.85em;
+}
+
+.message {
+    border-radius: 12px;
+    font-size: 0.9em;
+    display:inline-block;
+    color: darken($white-color, 5%);
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    text-align: left;
+}
+
+.me-avatar-container, .sender-avatar-container{
+    vertical-align: middle;
+    display: flex;
+}
+
+.me-avatar-container {
+    margin: 0.1em 0.3em 0.3em 0.5em;
+    justify-content: flex-end;
+}
+
+.sender-avatar-container {
+    margin: 0.1em 0.3em 0.3em 0.5em;
+    justify-content: flex-start;
+}
+
+.sender-message {
+    background-color: lighten($secondary-color, 6%);
+    padding: 0.2em 0.5em 0.3em 0.5em;
+}
+
+.me-message {
+    background-color: lighten($secondary-color, 3%);
+    padding: 0.1em 0.5em 0.3em 0.5em;
+}
+
+.me-container {
+    text-align: right;
+}
+.sender-container {
+    text-align: left;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.me {
+    margin: 0.3em 0.5em;
+    text-align: right;
+    color: $primary-color;
+}
+
+.sender {
+    margin: 0.3em 0.8em;
+    text-align: left;
+    color: darken($secondary-color, 10%);
+}
+
+.chat-area::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.chat-area::-webkit-scrollbar-track {
+    margin-top: 0.3em;
+    border-radius: 10px;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background-color: lighten($secondary-color, 5%);
+}
+
+.chat-avatar {
+    top: 50%;
+    border-radius: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.guest-avatar {
+    color: lighten($primary-color,20%);
+    margin-top: auto;
+    margin-bottom: auto;
+}

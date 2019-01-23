@@ -1,0 +1,54 @@
+@import '../../partials/basics';
+
+.tournament-card {
+  background-color: lighten($secondary-color, 5%);
+  size: 20em;
+  color: $white-color;
+
+   & button {
+     margin-bottom: 1em;
+   }
+}
+
+.tournament {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse {
+  border: 1px solid $secondary-color;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.tournament-card > div:first-child {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: $secondary-color;
+  color: $white-color;
+}
+
+.time-bubble {
+  border-radius: 0.5em;
+  margin-right: 1em;
+  padding: 0 .2em 0 .2em;
+
+  &.Started {   
+    border: .2em solid $primary-color;
+    background-color: $primary-color;
+    color: $black-color;
+  }
+
+  &.One {
+    border: .2em solid $accent-color;
+    background-color: $accent-color;
+    color: $black-color;
+  }
+
+  &.Five, &.Tomorrow {
+    border: .2em solid $accent-dark-color;
+    background-color: $accent-dark-color;
+    color: $white-color;
+  }
+
+}

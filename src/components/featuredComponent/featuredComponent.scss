@@ -1,0 +1,32 @@
+@import '../../partials/basics';
+
+.featuredContainer {
+    background-color: $secondary-color;
+    width: 100%;
+    margin: auto;
+    margin-top: $bl * 2;
+    padding: 1em;
+    padding-bottom: 0;
+    border-radius: $bl/2;
+    max-height: 17em;
+
+    & .carousel-indicators {
+        margin-bottom: 0;
+    }
+}
+
+.featuredImage {
+
+    align-content: center;
+    align-items: center;
+    display: flex;
+
+    & h5 {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 1em;
+    }
+}
+
+
+
